@@ -1,0 +1,29 @@
+# info
+site_name: Following Cynthia
+site_author: Cynthia
+site_description: A blog for Cynthia
+site_url: https://whocarsCynthia.github.io
+
+# repository information
+repo_name: 'Phil-Fan/Notes'
+repo_url: 'https://github.com/whocarsCynthia/whocarsCynthia.github.io'
+
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - toc.integrate
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - p1: p1.md
+  
