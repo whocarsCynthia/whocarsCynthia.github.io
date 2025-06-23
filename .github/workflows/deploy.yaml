@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages  # 工作流名称
 
 on:
   push:
-    branches: [ master ]      # 监听master分支的推送
+    branches: [ main ]      # 监听master分支的推送
   pull_request:              # 可选：监听PR用于预览
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -31,7 +31,14 @@ jobs:
     - name: Build
       run: mkdocs build --site-dir site
 
-    # 5. 部署到GitHub Pages
+    # 5. 优化缓存
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+    # 6. 部署到GitHub Pages
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
