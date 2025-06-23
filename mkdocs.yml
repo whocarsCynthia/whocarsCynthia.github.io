@@ -5,7 +5,7 @@ site_description: A blog for Cynthia
 site_url: 'http://www.whocarsCynthia.com'
 
 # repository information
-repo_name: 'Cynthia repo'
+repo_name: 'Cynthia AKA zzcy'
 repo_url: 'https://github.com/whocarsCynthia/whocarsCynthia.github.io'
 
 # copyright
@@ -16,8 +16,8 @@ use_directory_urls: false
 # configuration
 theme:
   name: material
-  logo: logo.ico
-  favicon: logo.ico
+  logo: logopro.ico  # 修改为实际路径
+  favicon: logopro.ico
   custom_dir: overrides
   icon: 
     admonition:
