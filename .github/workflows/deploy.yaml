@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages  # 工作流名称
+
+on:
+  push:
+    branches: [ master ]      # 监听master分支的推送
+  pull_request:              # 可选：监听PR用于预览
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest   # 使用最新的Ubuntu系统
+
+    steps:
+    # 1. 检出代码
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    # 2. 设置Python环境
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.x"
+
+    # 3. 安装依赖
+    - name: Install dependencies
+      run: |
+        pip install mkdocs mkdocs-material
+        pip install -r requirements.txt  # 如果有其他依赖
+
+    # 4. 构建网站（输出到site/目录）
+    - name: Build
+      run: mkdocs build --site-dir site
+
+    # 5. 部署到GitHub Pages
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site          # MkDocs的输出目录
+        keep_files: false            # 部署前清空目标分支

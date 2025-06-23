@@ -3,7 +3,7 @@ title: 留言板
 comments: true
 ---
 
-# Welcome! Do U Know Cynthia?
+# Welcome! 
 
 
 !!! note "正在学习"
