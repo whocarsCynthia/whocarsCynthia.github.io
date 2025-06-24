@@ -1,47 +1,38 @@
-name: Deploy to GitHub Pages  # 工作流名称
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]      # 监听master分支的推送
-  pull_request:              # 可选：监听PR用于预览
     branches: [ main ]
+  schedule:
+    - cron: "0 0 * * *" # 每天凌晨执行一次（可选）
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest   # 使用最新的Ubuntu系统
+    runs-on: ubuntu-latest
 
     steps:
-    # 1. 检出代码
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    # 2. 设置Python环境
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.x"
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
 
-    # 3. 安装依赖
-    - name: Install dependencies
-      run: |
-        pip install mkdocs mkdocs-material
-        pip install -r requirements.txt  # 如果有其他依赖
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-jupyter mkdocs-heti-plugin mkdocs-statistics-plugin
+          pip install pymdownx-materialx  # 可选：增强 Material 主题功能
+          pip install mdx_truly_sane_lists
 
-    # 4. 构建网站（输出到site/目录）
-    - name: Build
-      run: mkdocs build --site-dir site
+      - name: Build site
+        run: mkdocs build
 
-    # 5. 优化缓存
-    - name: Cache dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-
-    # 6. 部署到GitHub Pages
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./site          # MkDocs的输出目录
-        keep_files: false            # 部署前清空目标分支
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          target_branch: main         # 部署到 main 分支
+          publish_branch: main        # 保持一致
+          keep_files: false           # 清理旧文件
