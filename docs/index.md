@@ -3,18 +3,20 @@ title: 留言板
 comments: true
 ---
 
-# Welcome! F
+# Welcome! 
 ---
 
 
 !!! note "正在学习"
     - TOEFL   
-    - 2
+    - 静态网站搭建
+    - sql
     
     
 
 !!! tip "七日待办"
     - [x] 生理心理学课程论文<br>
+    - [ ] 字节面试
 
 !!! tip "月行程"
     - [ ] 话剧《温暖的味道》 南京
@@ -24,7 +26,8 @@ comments: true
 
 
 ## Existing Bugs
-- [ ] 无法进入网页
+- [x] 无法进入网页
+- [ ] 评论显示错误
   
 
 ## enhancement
