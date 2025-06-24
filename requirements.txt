@@ -3,3 +3,5 @@ mkdocs-material
 mkdocs-jupyter
 mkdocs-heti-plugin
 mkdocs-statistics-plugin
+pymdownx-materialx
+mdx_truly_sane_lists
