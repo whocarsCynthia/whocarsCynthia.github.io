@@ -33,6 +33,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          target_branch: main         # 部署到 main 分支
-          publish_branch: main        # 保持一致
+          #target_branch: main         # 部署到 main 分支
+          publish_branch: gh-pages      # 保持一致
           keep_files: false           # 清理旧文件
