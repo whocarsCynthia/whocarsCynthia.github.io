@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material mkdocs-jupyter mkdocs-heti-plugin mkdocs-statistics-plugin
+          pip install mkdocs mkdocs-material mkdocs-jupyter mkdocs-heti-plugin mkdocs-statistics-plugin mkdocs-video
           pip install mdx_truly_sane_lists
           pip install mkdocs-git-revision-date-localized-plugin
 
