@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install mkdocs mkdocs-material mkdocs-jupyter mkdocs-heti-plugin mkdocs-statistics-plugin
-          pip install pymdownx-materialx  # 可选：增强 Material 主题功能
+          pip install materialx  
           pip install mdx_truly_sane_lists
 
       - name: Build site
