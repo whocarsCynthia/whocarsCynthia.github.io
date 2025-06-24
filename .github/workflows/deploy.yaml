@@ -22,7 +22,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install mkdocs mkdocs-material mkdocs-jupyter mkdocs-heti-plugin mkdocs-statistics-plugin
-          pip install materialx  
           pip install mdx_truly_sane_lists
 
       - name: Build site
