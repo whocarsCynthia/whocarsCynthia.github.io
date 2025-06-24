@@ -3,7 +3,7 @@ title: 留言板
 comments: true
 ---
 
-# Welcome! 
+# Welcome! ！
 ---
 
 
@@ -24,7 +24,7 @@ comments: true
 
 
 ## Existing Bugs
-- [x] jupyter notebook下 数学公式渲染错误
+- [ ] 无法进入网页
   
 
 ## enhancement
