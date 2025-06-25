@@ -127,3 +127,190 @@ h5 {
 .mdui-shadow-22{-webkit-box-shadow:0 10px 14px -6px rgba(0,0,0,.2),0 22px 35px 3px rgba(0,0,0,.14),0 8px 42px 7px rgba(0,0,0,.12)!important;box-shadow:0 10px 14px -6px rgba(0,0,0,.2),0 22px 35px 3px rgba(0,0,0,.14),0 8px 42px 7px rgba(0,0,0,.12)!important}
 .mdui-shadow-23{-webkit-box-shadow:0 11px 14px -7px rgba(0,0,0,.2),0 23px 36px 3px rgba(0,0,0,.14),0 9px 44px 8px rgba(0,0,0,.12)!important;box-shadow:0 11px 14px -7px rgba(0,0,0,.2),0 23px 36px 3px rgba(0,0,0,.14),0 9px 44px 8px rgba(0,0,0,.12)!important}
 .mdui-shadow-24{-webkit-box-shadow:0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12)!important;box-shadow:0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12)!important}
+
+
+/* 预加载字体连接 */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* 通过CSS变量定义字体栈 */
+:root {
+  --md-text-font: 
+    "Noto Serif SC", "Times New Roman", "Microsoft YaHei";
+    font-weight: 600;
+  
+  /* 代码字体保持不变 */
+  --md-code-font: 
+    'Roboto Mono', 
+    monospace;
+  
+  /* 标题字体变量 */
+  --md-header-font: 
+    "Josefin Sans", 
+    "Segoe UI", 
+    "Noto serif SC";
+}
+
+/* 导航菜单字体 */
+.md-nav__title,
+.md-nav__item,
+.md-nav_link {
+  font-family: 
+    "Noto San SC",  
+    var(--md-header-font-en);   
+  font-weight: 700;
+}
+
+/* 应用标题字体 */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: 
+    var(--md-header-font), 
+    var(--md-text-font);
+  font-weight: 600;
+}
+
+/* 优化字体渲染 */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  :root {
+    /* 移动端可微调字体大小 */
+    font-size: 98%;
+  }
+  
+  .md-typeset {
+    /* 移动端增加行高 */
+    line-height: 1.65;
+  }
+}
+
+/* 代码块保持等宽字体 */
+code, kbd, pre {
+  font-family: var(--md-code-font) !important;
+  font-weight: 400;
+}
+
+
+/* 表格字体优化 */
+.md-typeset table:not([class]) {
+  font-family: var(--md-text-font);
+  font-size: 0.85rem;
+}
+
+/*尝试UI优化*/
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 悬停放大效果 */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+.md-button:focus:after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
+
+/* 侧边导航美化 */
+.md-nav {
+  background: var(--md-default-bg-color);
+  border-radius: 10px;
+  padding: 0.5rem !important;
+  width: 98%;
+}
+
+.md-nav__item {
+  margin: 0.3rem 0;
+}
+
+.md-nav__link {
+  border-radius: 8px;
+  transition: all 0.2s;
+  padding: 0.5rem 0.5rem !important;
+}
+
+.md-nav__link:hover {
+  background: rgba(0,0,0,0.05);
+  transform: translateX(5px);
+}
+
+/* ========== 浅色模式 ========== */
+[data-md-color-scheme="default"] {
+  --md-nav-active-bg-color: rgba(0, 0, 0, 0.1); /* 浅灰色背景 */
+  --md-nav-active-text-color: var(--md-accent-fg-color); 
+  --md-nav-active-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  --md-default-bg-color: linear-gradient(
+    to bottom right,
+    #ffffff 0%, 
+    #ffffff 100%
+    );
+}
+
+/* ========== 深色模式 ========== */
+[data-md-color-scheme="slate"] {
+  --md-nav-active-bg-color: rgba(255, 255, 255, 0.1); /* 浅白色背景 */
+  --md-nav-active-text-color: var(--md-accent-fg-color); /* 使用强调色 */
+  --md-nav-active-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  --md-default-bg-color: linear-gradient(
+    to bottom right, 
+    #1a1a22 10%, 
+    #515156 100%
+  );
+}
+
+/* ========== 通用激活项样式 ========== */
+.md-nav__link--active {
+  background: var(--md-nav-active-bg-color);
+  color: var(--md-nav-active-text-color) !important;
+  box-shadow: var(--md-nav-active-shadow);
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+
+/* 桌面端调整 */
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary {
+    padding-left: 0rem !important;
+  }
+}
+
+/* 移动端保持默认 */
+@media screen and (max-width: 76.25em) {
+  .md-nav--primary {
+    padding-left: 0.8rem !important;
+  }
+}
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 600px; /* 可按需调整最大宽度 */
+}
