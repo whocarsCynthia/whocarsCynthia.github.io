@@ -314,3 +314,48 @@ img:hover {
   width: 100%;
   max-width: 600px; /* 可按需调整最大宽度 */
 }
+
+/* 进度条样式 */
+.progress-label {
+  position: block;
+  text-align: center;
+  font-weight: 400;
+  font-size:10px;
+  color:rgba(53, 53, 53, 0.825);
+  width: 98%;
+  margin: 0rem;
+  line-height: 0.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 1rem;
+  float: left;
+  border-radius: 10px;
+  background-color: #cde9ff;
+}
+
+.progress {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  height: 1rem;
+  background-color: #eeeeee;
+  position: relative;
+  border-radius: 10px;
+}
+
+.progress.thin {
+  margin-top: 0.9rem;
+  height: 0.4rem;
+}
+
+.progress.thin .progress-label {
+  margin-top: -0.4rem;
+}
+
+.progress.thin .progress-bar {
+  height: 0.4rem;
+}
+
