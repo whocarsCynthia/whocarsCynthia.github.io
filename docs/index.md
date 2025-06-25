@@ -30,7 +30,9 @@ comments: true
 - [x] 无法进入网页
 - [x] 评论显示错误
 - [x] 嵌套列表不显示
-- [x] 添加图片
+- [ ] 图片在safari不显示
+- [ ] 中文字体不显示
+- [ ] 行文页面过宽
   
 
 ## Enhancements
@@ -38,6 +40,7 @@ comments: true
 - [x] icon自定义
 - [ ] UI美化
 - [ ] 插件
+- [ ] 代码高亮
 
 ## Additions
 - [ ] zotere

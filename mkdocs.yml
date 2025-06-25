@@ -147,6 +147,7 @@ markdown_extensions:
   - pymdownx.progressbar  # 支持进度条
   - pymdownx.striphtml  # 去除HTML标签
   - pymdownx.saneheaders  # 优化标题解析，避免冲突
+  - attr_list
 
 extra_css:
   - css/custom.css
