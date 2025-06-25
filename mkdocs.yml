@@ -170,9 +170,10 @@ nav:
   - 牛马手记: working.md
   - 课程学习: courses.md
   - 知识囤货: studying.md
-  - 迷惑大赏: emotion.md
-  - 生活提示: daily.md
+  - 生活记录: daily.md
+  - 人格侦探: emotion.md
   - 脑洞发散: write.md
+  
   
   
 plugins:
