@@ -18,15 +18,15 @@ use_directory_urls: true
 # configuration
 theme:
   name: material
-  logo: logopro.ico  # 修改为实际路径
-  favicon: logopro.ico
+  logo: logo.ico  # 修改为实际路径
+  favicon: logo.ico
   custom_dir: overrides
   icon: 
     admonition:
-      note: octicons/tag-16
+      note: octicons/book-16
       abstract: octicons/checklist-16
       info: octicons/info-16
-      tip: octicons/squirrel-16
+      tip: material/alarm-multiple
       success: octicons/check-16
       question: octicons/question-16
       warning: octicons/alert-16
@@ -35,6 +35,7 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+      important: octicons/tag-16
 
   features:
   # navigation
@@ -59,23 +60,19 @@ theme:
   language: 'zh'
 
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue
+    - scheme: default
+      primary: white  # 主色调
+      accent: indigo   # 强调色
       toggle:
         icon: material/weather-sunny
-        name: Switch to dark mode
-  # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+        name: 浅色模式
+    - scheme: slate
       primary: black
+      accent: teal
       toggle:
         icon: material/weather-night
-        name: Switch to light mode
+        name: 深色模式
 
-  font:
-    text: Noto Serif SC # Roboto
-    code: JetBrains Mono
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -115,6 +112,7 @@ markdown_extensions:
         #   format: !!python/object/apply:pymdownx.arithmatex.arithmatex_fenced_format  # 数学公式
 
   # 扩展mk语法
+  - pymdownx.critic
   - pymdownx.caret  # 支持插入符号（^）表示上标
   - pymdownx.emoji:
       # emoji_index: !!python/name:pymdownx.emoji.twemoji
@@ -131,6 +129,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true  # 允许创建自定义风格的任务列表
   - pymdownx.tilde  # 使用波浪线（~）表示删除线
+  - pymdownx.keys
 
   # 文档布局与样式
   - pymdownx.details  # 允许添加可展开的详细信息块
@@ -140,6 +139,9 @@ markdown_extensions:
   - pymdownx.escapeall:
       hardbreak: True  # 硬换行
       nbsp: True  # 不断行空格
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
   # 其他功能
   - pymdownx.progressbar  # 支持进度条
@@ -151,19 +153,27 @@ extra_css:
   - css/counter.css
   - css/toc.css
   - css/flink.css
-  # source: https://tonycrane.cc/
-  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
-  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - css/extra.css
+  - https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap
+  - https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap
+  
 
 extra_javascript:
   - javascripts/mathjax.js
   - javascripts/toc.js
   - javascripts/MathJax-3.2.2/es5/tex-mml-chtml.js
+  - javascripts/custom.js
   # - https://polyfill.alicdn.com/polyfill.min.js?features=es6
 
 nav:
   - Home: index.md
   - 牛马手记: working.md
+  - 课程学习: courses.md
+  - 知识囤货: studying.md
+  - 迷惑大赏: emotion.md
+  - 生活提示: daily.md
+  - 脑洞发散: write.md
+  
   
 plugins:
 
