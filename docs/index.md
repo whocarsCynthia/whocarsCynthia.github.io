@@ -33,6 +33,7 @@ comments: true
 - [ ] 图片在safari不显示
 - [ ] 中文字体不显示
 - [ ] 行文页面过宽
+- [ ] 进度条问题
   
 
 ## Enhancements
