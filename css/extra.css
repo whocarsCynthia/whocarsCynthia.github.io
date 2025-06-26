@@ -359,3 +359,37 @@ img:hover {
   height: 0.4rem;
 }
 
+/* 表格全局样式 */
+.md-typeset table:not([class]) {
+  line-height: 0.6;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  padding: 0.7em 1em;
+  height: 1.5em;
+  transition: background-color 0.2s;
+}
+
+/* 表头样式 */
+.md-typeset table:not([class]) th {
+  height: 1em;
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* 悬停效果 */
+.md-typeset table:not([class]) tr:hover td {
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* 深色模式适配 */
+[data-md-color-scheme="slate"] table:not([class]) th {
+  background-color: rgba(255,255,255,0.1);
+}
+
+[data-md-color-scheme="slate"] table:not([class]) tr:hover td {
+  background-color: rgba(255,255,255,0.05);
+}
