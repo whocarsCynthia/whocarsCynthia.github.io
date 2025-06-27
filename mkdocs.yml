@@ -168,10 +168,10 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - 牛马手记: working.md
   - 课程学习: courses.md
   - 知识囤货: studying.md
   - 生活访问: daily.md
+  - 牛马手记: working.md
   - 人格探索: emotion.md
   - 脑洞发散: write.md
   
