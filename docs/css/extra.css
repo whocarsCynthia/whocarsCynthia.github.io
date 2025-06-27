@@ -431,27 +431,6 @@ img:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-/* 添加滚动提示 */
-.md-typeset__table {
-  background:
-    linear-gradient(to right, white 30%, rgba(255,255,255,0)),
-    linear-gradient(to left, white 30%, rgba(255,255,255,0)) 100% 0,
-    radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,0.2), transparent),
-    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,0.2), transparent);
-  background-repeat: no-repeat;
-  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
-  background-attachment: local, local, scroll, scroll;
-}
-
-/* 深色模式适配 */
-[data-md-color-scheme="slate"] table:not([class]) th {
-  background-color: rgba(255,255,255,0.1);
-}
-
-[data-md-color-scheme="slate"] table:not([class]) tr:hover td {
-  background-color: rgba(255,255,255,0.05);
-}
-
 .grid {
   display: flex;
   gap: 2rem;
