@@ -7,6 +7,7 @@ comments: true
 ---
 
 ## START
+这里有张图片加载中……
 ![](coverfig.jpg){: .center-img}
 
 ???+ note "正在学习"
