@@ -202,6 +202,21 @@ body {
       sans-serif;
   }
 
+/* iOS 设备特殊处理 */
+@supports (-webkit-touch-callout: none) {
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Android 设备特殊处理 */
+@supports (font-variation-settings: normal) {
+  body {
+    font-variation-settings: "opsz" auto;
+  }
+}
+
   .md-nav__title,
   .md-nav__item,
   .md-nav_link {
