@@ -1,6 +1,6 @@
 ---
 title: 人类生存指南
-comments: true
+comments: False
 ---
 
 这一部分将陆陆续续汇集平常学习了解的*杂七杂八* 的内容和技能。

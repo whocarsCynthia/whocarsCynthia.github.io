@@ -1,6 +1,6 @@
 ---
 title: 人类生存指南
-comments: true
+comments: False
 ---
 
 # 牛马手记

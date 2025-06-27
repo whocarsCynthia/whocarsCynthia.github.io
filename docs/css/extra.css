@@ -157,8 +157,7 @@ h5 {
   
   /* 标题字体变量 */
   --md-header-font: 
-    "Josefin Sans", 
-    "Segoe UI", 
+    "Josefin Sans",  
     "Noto serif SC";
 }
 
@@ -168,7 +167,8 @@ h5 {
 .md-nav_link {
   font-family: 
     "Josefin Sans",
-    "Noto Sans SC";   
+    "Noto Sans SC",
+    "Hiragino Sans GB";   
   font-weight: bold;
 }
 
@@ -198,8 +198,14 @@ body {
      /* 移动端调整字体栈顺序 */
     --md-text-font: 
       "Noto Serif SC",
-      "Microsoft YaHei",
-      sans-serif;
+      "宋体",
+      "Hiragino Sans GB",
+      sans-serif,
+      PingFang SC;
+    --md-header-font: 
+    "Josefin Sans", 
+    "Noto Sans SC", 
+    "Hiragino Sans GB";
   }
 
 /* iOS 设备特殊处理 */
@@ -222,7 +228,8 @@ body {
   .md-nav_link {
   font-family: 
     "Josefin Sans",
-    "Noto Sans SC";   
+    "Noto Sans SC",
+    "Hiragino Sans GB";   
   font-weight: medium;
 }
   
@@ -399,8 +406,8 @@ img:hover {
 
 /* 表格全局样式 */
 .md-typeset table:not([class]) {
-  line-height: 1;
-  border-radius: 8px;
+  line-height: 1.2;
+  border-radius: 6px;
   overflow: hidden;
   font-size: 12px;
   
