@@ -55,7 +55,8 @@ theme:
     - toc.integrate
     - content.code.annotate  
     - content.code.copy  
-    - content.tabs.link  
+    - content.tabs.link 
+    - content.code.select
   
   language: 'zh'
 
@@ -100,16 +101,21 @@ markdown_extensions:
       # block_tag: 'pre'  # 使用<pre>标签包裹块级公式
   
   # 代码相关
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences:
        preserve_tabs: true  # 保留制表符
        custom_fences:
-        - name: diagram
-          class: diagram
+        - name: mermaid
+          class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format  # Mermaid图表
-        # - name: math
-        #   class: arithmatex
-        #   format: !!python/object/apply:pymdownx.arithmatex.arithmatex_fenced_format  # 数学公式
+        #- name: math
+        #  class: arithmatex
+         # format: !!python/object/apply:pymdownx.arithmatex.arithmatex_fenced_format  # 数学公式
 
   # 扩展mk语法
   - pymdownx.critic
@@ -163,15 +169,16 @@ extra_javascript:
   - javascripts/mathjax.js
   - javascripts/toc.js
   - javascripts/MathJax-3.2.2/es5/tex-mml-chtml.js
-  - javascripts/custom.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+  - javascripts/extra.js
   # - https://polyfill.alicdn.com/polyfill.min.js?features=es6
 
 nav:
   - Home: index.md
-  - 课程学习: courses.md
-  - 知识囤货: studying.md
   - 生活访问: daily.md
   - 牛马手记: working.md
+  - 课程学习: courses.md
+  - 知识囤货: studying.md
   - 人格探索: emotion.md
   - 脑洞发散: write.md
   
@@ -223,3 +230,4 @@ plugins:
       video_controls: True
       css_style:
         width: "50%"    
+  

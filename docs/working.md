@@ -5,6 +5,7 @@ comments: False
 
 # 牛马手记
 
+
 点击查看守则：
 ??? example "牛马须知"
     - 主动介绍自己<br>    
@@ -18,32 +19,139 @@ comments: False
     - [ ] 宣讲ppt<br>
     - [ ] 跟进项目安排<br>
 
-
 ## Internship 
-Description：过渡一下。工作时间：8:30-17:00，午休11:20-13:30。
-=== "week1"
-    啥也没干，领导们太忙没空管我，先适应几天，主要是蹭网蹭电写论文，认人记名喊领导，蹭吃蹭纸蹭床蹭空调，守大门，偷听八卦中……
-    领导们好和蔼，和想象中的登味氛围有点差异，陷入沉思。
-    科长、局长这些词不知为何很难启齿……脱敏中……<br>
+### A Government Agency
+    过渡一下。  
+    工作时间：8:30-17:00，午饭午休11:20-13:30。
+    工作周期：06/23-  
 
-    我被万恶的“体制内就是稳定”氛围腐蚀了……完全没干任何事情的头三天，虽然没有工资，但是吃喝住行都获得了挺多帮助，整体开销比起在学校里瘫着也就多出一个项目：买点新的日用品。通勤只有20分钟，领导们都觉得我累。感觉比去企业实习还要考虑租房舒服多了（找房子真的好难）  
+=== "week 1"
+    这一周几乎没有参与正式的工作。基本坐在工位上守着科室大门。  
+    具体是，蹭网蹭电，认人记名，连吃带拿床蹭空调，以及偷听八卦。    
+    前两天把课程论文写完，后面几天就自顾自开始鼓捣这个网站。  
+
+    气氛比想象中更加紧凑而宽松。
     
-    观察，领导们非常忙，主要是敲稿子、改稿子、打电话、开会和跑外勤。（真讨厌一直嘟嘟嘟响的电话）但也没有忙到很恐怖的程度吧，该聊聊、该吃吃、该睡睡，好吧，这个可能是取决于领导的level。有的科长总是最晚走最早来。
+    紧凑在于，这不是一个养老科室。领导和前辈们是十分繁忙的，忙着对接、开会、敲文件、打电话、签文件、跑外勤。  
+    📢座机电话嘟嘟嘟响真令我脑袋疼。  
 
-    人物们的性格里也有相通的一点。中午吃饭听八卦，有位领导就讲自己上得大学虽然不怎么好，但现在混得比其他一些好大学的高中同学舒坦多了云云。又聊到恋爱问题。领导们就会很突出考虑现实因素和“门当户对”的概念，分享了一些被父母硬生生拆散的大学小情侣。总之这些特征都比较符合刻板印象。
+    由于上下传达导致的信息迟滞，以及与外部合作单位的沟通不畅，我观察感觉工作效率并不很高。工作要求并不苛刻，也就是很少存在需要短时间完成巨量任务的压榨模式。  
+    然而，多线程的事务堆积仍然让大家显得很忙、感觉很累。    
 
+    宽松在于，前辈们格外亲切和蔼，与预先想象中的严肃、说教的氛围有很大差异。也许是科室平均年龄不高且女性偏多的缘故。  
+    前辈们时不时就会开点玩笑、说点家长里短的八卦，然后积极吃饭、安心午休。  
+    
+    松弛。整体符合对体制内的刻板印象。  
 
-    *糗事记录*
+    人物们的性格也是符合刻板印象的一部分。  
+    听八卦，基本上关于家庭、工作上的对话，甭管是领导还是邻居皆可蛐蛐。  
+    有一次比较典型的发言：虽然自己高考失利大学不怎么好，但现在混得比其他一些好大学的高中同学舒坦多了。  
+    又聊到恋爱问题。领导们突出考虑现实因素和“门当户对”的概念，并倾情分享了一些故事，比如“很有手段的小姑娘拿捏了富家少爷”，比如被父母硬生生拆散的大学小情侣……
 
-    * 一早到岗，电梯口碰到一个领导，隐隐眼熟，第一天并没引荐（但是整层楼的人好像都知道我了）。领导主动看向我！内心大慌张！还好记了一下办公室门口的工牌名字，磕磕绊绊地吐出：x局？x局！领导微笑。  
+    最后，科长、局长这些词不知为何很难启齿，仍在尽力脱敏中……  
+
+=== "week 2"
+
+---
+
+???+ question "糗事记录"
+    
+    - Day 2 一早到岗，电梯口碰到一个领导，隐隐眼熟，第一天并没引荐（但是整层楼的人好像都知道我了）。  
+     领导主动看向我！  
+     内心大慌张！  
+     还好前一天扫了办公室门口的工牌名字，犹疑小声地吐出：x局？  
+     领导微笑。  
+     进电梯，遂尬聊之：您来得这么早。。。  
+     领导不语。  
+     出了电梯走了好一段，领导才道：习惯了。
+
   
-    * 科长下午开会回来，匆匆赶进办公室。本想说一句：科长好（中气十足）！但还没脱敏，没说出来。下意识想挥手打个招呼，然后抬起右手    
+    - 科长下午开会回来，匆匆赶进办公室。  
+     本想说一句：科长好（中气十足）！但还没脱敏，没说出来。下意识想挥手打个招呼，然后抬起右手——    
      ……僵住了   
      ……敬了个礼……    
      敬了个礼…… 
      啊啊啊……
 
-## Interview
-    字节跳动面试。
+    - 要添加一位领导的微信，发送申请时，写错了人家的姓氏……
 
-## CV helper
+    - 主动帮前辈姐做点杂活，她发消息说：你多在领导面前表现，我这不用。  
+      慌🤯 
+     
+
+
+## Interview
+
+<div class="grid cards" markdown>
+
+-   :material-clock-fast:{ .lg .middle } __字节跳动面试__
+
+    ---
+
+    Install [`mkdocs-material`](#) with [`pip`](#) and get up
+    and running in minutes
+
+    [:octicons-arrow-right-24: Getting started](#)
+    
+    -   :material-clock-fast:{ .lg .middle } __研究所面试__
+
+    ---
+
+    Install [`mkdocs-material`](#) with [`pip`](#) and get up
+    and running in minutes
+
+    [:octicons-arrow-right-24: Getting started](#)
+
+    -   :material-clock-fast:{ .lg .middle } __帆软电话面试__
+
+    ---
+
+    Install [`mkdocs-material`](#) with [`pip`](#) and get up
+    and running in minutes
+
+    [:octicons-arrow-right-24: Getting started](#)
+
+
+-   :material-format-font:{ .lg .middle } __腾讯综测__
+
+    ---
+
+    Change the colors, fonts, language, icons, logo and more with a few lines
+
+    [:octicons-arrow-right-24: Customization](#)
+
+-   :material-scale-balance:{ .lg .middle } __帆软笔试__
+
+    ---
+
+    Material for MkDocs is licensed under MIT and available on [GitHub]
+
+    [:octicons-arrow-right-24: License](#)
+
+    -   :material-scale-balance:{ .lg .middle } __虾皮笔试__
+
+    ---
+
+    Material for MkDocs is licensed under MIT and available on [GitHub]
+
+    [:octicons-arrow-right-24: License](#)
+
+    -   :material-scale-balance:{ .lg .middle } __美团笔试__
+
+    ---
+
+    Material for MkDocs is licensed under MIT and available on [GitHub]
+
+    [:octicons-arrow-right-24: License](#)
+
+    -   :material-scale-balance:{ .lg .middle } __华为笔试__
+
+    ---
+
+    机试太难了，考三道算法大题。跑如路。
+
+    [:octicons-arrow-right-24: License](#)
+
+</div>
+
+## CV Assistance

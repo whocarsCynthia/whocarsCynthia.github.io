@@ -1,5 +1,5 @@
 /* 预加载字体连接 */
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif+JP:wght@200..900&display=swap");
 
 .md-typeset div.arithmatex {
   overflow-y: hidden;
@@ -147,12 +147,16 @@ h5 {
 /* 通过CSS变量定义字体栈 */
 :root {
   --md-text-font: 
-    "Noto Serif SC", "Times New Roman", "Noto Serif KR","Hiragino Sans GB", "Microsoft YaHei";
+    "Noto Serif SC", "Times New Roman", 
+    "Noto Serif KR", "Noto Serif JP",
+    "Hiragino Sans GB", 
+    "Microsoft YaHei";
     font-weight: 600;
   
   /* 代码字体保持不变 */
   --md-code-font: 
-    'Roboto Mono', 
+    'Roboto Mono',
+    "Noto Sans SC", 
     monospace;
   
   /* 标题字体变量 */
@@ -198,7 +202,7 @@ body {
      /* 移动端调整字体栈顺序 */
     --md-text-font: 
       "Noto Serif SC",
-      "宋体",
+      "\5b8b\4f53",
       "Hiragino Sans GB",
       sans-serif,
       PingFang SC;
@@ -236,12 +240,6 @@ body {
   body {
     font-variation-settings: "opsz" auto;
   }
-}
-
-/* 代码块保持等宽字体 */
-code, kbd, pre {
-  font-family: var(--md-code-font) !important;
-  font-weight: 400;
 }
 
 
@@ -456,3 +454,44 @@ img:hover {
     flex-direction: column;
   }
 }
+
+
+/* 代码块 */
+code, kbd, pre {
+  font-family: var(--md-code-font) !important;
+  font-weight: 400;
+}
+
+:root > * {
+  --md-code-fg-color: auto;
+  --md-code-hl-string-color: #fc7a39;
+  --md-code-hl-number-color: #228e48;
+}
+
+/* 代码块自动换行 */
+pre code {
+  white-space: pre-wrap !important;  /* 保留空格但允许换行 */
+  word-wrap: break-word !important;
+}
+
+
+/* Mermaid 全局图表背景 */
+.mermaid {
+  background-color: transparent !important;
+  font-family: var(--md-text-font) !important;
+}
+
+/* 浅色主题样式 */
+[data-md-color-scheme="default"] .#__mermaid_0 .actor,
+ .#__mermaid_0 .note {
+  fill: #d4ebff !important;
+  stroke: #7aa3e5 !important;
+}
+[data-md-color-scheme="default"] {
+  --md-mermaid-sequence-actor-bg-color: #ddedfc !important;
+  --md-mermaid-sequence-actor-border-color: #7aa3e5 !important;
+  --md-mermaid-sequence-actor-fg-color: #1e1e1e !important;
+  --md-mermaid-sequence-note-bg-color:  #ddedfc !important;
+  --md-mermaid-sequence-note-border-color: #7aa3e5 !important;
+}
+
