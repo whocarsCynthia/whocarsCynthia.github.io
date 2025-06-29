@@ -8,7 +8,7 @@ comments: true
 
 ## START
 这里有张图片加载中……
-[![](pic/coverfig.jpg){: .center-img}](daily.md/)
+[![](pic/coverfig.jpg){: .center-img}](life/entertain.md/)
 
 ???+ note "正在学习"
     - TOEFL   
@@ -61,10 +61,12 @@ comments: true
 
 
 === "DeveloperLog" 
+   
     - 20250629
-      腱鞘炎中。
+      腱鞘炎中。  
       更新了子页面内容；
       继续调整了序列图的样式配置；
+      重置了docs/.md文件架构
      
     - 20250628  
       添加了封面图片点击跳转；添加了内容层级折叠；  
