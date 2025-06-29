@@ -1,3 +1,6 @@
+/* 预加载字体连接 */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif+JP:wght@200..900&display=swap");
+
 .md-typeset div.arithmatex {
   overflow-y: hidden;
 } /* 解决公式带纵向滚动条 */
@@ -65,6 +68,17 @@ span.mjpage__block > svg {
     max-width: none !important;
 }
 
+/* 图片居中 */
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 600px; /* 可按需调整最大宽度 */
+  margin: 1rem auto;
+  image-rendering: -webkit-optimize-contrast; /* 改善渲染 */
+}
+
 .md-icon, .md-clipboard::before, .md-nav__title::before, .md-nav__button, .md-nav__link::after, .md-search-result__article--document::before, .md-source-file::before, .md-typeset .admonition > .admonition-title::before, .md-typeset details > .admonition-title::before, .md-typeset .admonition > summary::before, .md-typeset details > summary::before, .md-typeset .footnote-backref, .md-typeset .critic.comment::before, .md-typeset summary::after, .md-typeset .task-list-control .task-list-indicator::before {
   font-family: 'Material Icons' !important; /* over ride is needed*/
   font-style: normal !important; /* over ride is needed*/
@@ -129,24 +143,25 @@ h5 {
 .mdui-shadow-24{-webkit-box-shadow:0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12)!important;box-shadow:0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12)!important}
 
 
-/* 预加载字体连接 */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* 通过CSS变量定义字体栈 */
 :root {
   --md-text-font: 
-    "Noto Serif SC", "Times New Roman", "Microsoft YaHei";
+    "Noto Serif SC", "Times New Roman", 
+    "Noto Serif KR", "Noto Serif JP",
+    "Hiragino Sans GB", 
+    "Microsoft YaHei";
     font-weight: 600;
   
   /* 代码字体保持不变 */
   --md-code-font: 
-    'Roboto Mono', 
+    'Roboto Mono',
+    "Noto Sans SC", 
     monospace;
   
   /* 标题字体变量 */
   --md-header-font: 
-    "Josefin Sans", 
-    "Segoe UI", 
+    "Josefin Sans",  
     "Noto serif SC";
 }
 
@@ -155,9 +170,10 @@ h5 {
 .md-nav__item,
 .md-nav_link {
   font-family: 
-    "Noto San SC",  
-    var(--md-header-font-en);   
-  font-weight: 700;
+    "Josefin Sans",
+    "Noto Sans SC",
+    "Hiragino Sans GB";   
+  font-weight: bold;
 }
 
 /* 应用标题字体 */
@@ -180,23 +196,50 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 响应式调整 */
+/* 移动端响应式调整 */
 @media screen and (max-width: 768px) {
   :root {
-    /* 移动端可微调字体大小 */
-    font-size: 98%;
+     /* 移动端调整字体栈顺序 */
+    --md-text-font: 
+      "Noto Serif SC",
+      "\5b8b\4f53",
+      "Hiragino Sans GB",
+      sans-serif,
+      PingFang SC;
+    --md-header-font: 
+    "Josefin Sans", 
+    "Noto Sans SC", 
+    "Hiragino Sans GB";
   }
+
+  .md-nav__title,
+  .md-nav__item,
+  .md-nav_link {
+  font-family: 
+    "Josefin Sans",
+    "Noto Sans SC",
+    "Hiragino Sans GB";   
+  font-weight: medium;
+}
   
-  .md-typeset {
-    /* 移动端增加行高 */
-    line-height: 1.65;
+  /* 移动端增加行高 */
+  body {
+    line-height: 1.8;
+}}
+
+/* iOS 设备特殊处理 */
+@supports (-webkit-touch-callout: none) {
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
   }
 }
 
-/* 代码块保持等宽字体 */
-code, kbd, pre {
-  font-family: var(--md-code-font) !important;
-  font-weight: 400;
+/* Android 设备特殊处理 */
+@supports (font-variation-settings: normal) {
+  body {
+    font-variation-settings: "opsz" auto;
+  }
 }
 
 
@@ -307,13 +350,7 @@ img:hover {
   }
 }
 
-.center-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 600px; /* 可按需调整最大宽度 */
-}
+
 
 /* 进度条样式 */
 .progress-label {
@@ -359,25 +396,39 @@ img:hover {
   height: 0.4rem;
 }
 
-/* 表格全局样式 */
-.md-typeset table:not([class]) {
-  line-height: 0.6;
-  border-radius: 8px;
-  overflow: hidden;
-  font-size: 12px;
+/* 表格容器样式 */
+.md-typeset__table {
+  overflow-x: auto; /* 水平滚动 */
+  -webkit-overflow-scrolling: touch; /* iOS平滑滚动 */
 }
 
+/* 表格全局样式 */
+.md-typeset table:not([class]) {
+  line-height: 1.2;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 12px;
+  
+}
+
+/* 单元格样式 */
 .md-typeset table:not([class]) td,
 .md-typeset table:not([class]) th {
-  padding: 0.7em 1em;
+  padding: 0.4em 0.7em;
   height: 1.5em;
   transition: background-color 0.2s;
+  word-break: break-word;
+  white-space: normal;
+  border: 1px dotted rgba(0,0,0,0.1);
+  width: auto;
 }
+
 
 /* 表头样式 */
 .md-typeset table:not([class]) th {
   height: 1em;
   background-color: rgba(0,0,0,0.1);
+  text-align: center !important;
 }
 
 /* 悬停效果 */
@@ -385,11 +436,62 @@ img:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-/* 深色模式适配 */
-[data-md-color-scheme="slate"] table:not([class]) th {
-  background-color: rgba(255,255,255,0.1);
+.grid {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-[data-md-color-scheme="slate"] table:not([class]) tr:hover td {
-  background-color: rgba(255,255,255,0.05);
+.column {
+  width: 50%;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+  }
+}
+
+
+/* 代码块 */
+code, kbd, pre {
+  font-family: var(--md-code-font) !important;
+  font-weight: 400;
+}
+
+:root > * {
+  --md-code-fg-color: auto;
+  --md-code-hl-string-color: #fc7a39;
+  --md-code-hl-number-color: #228e48;
+}
+
+/* 代码块自动换行 */
+pre code {
+  white-space: pre-wrap !important;  /* 保留空格但允许换行 */
+  word-wrap: break-word !important;
+}
+
+
+/* Mermaid 全局图表背景 */
+.mermaid {
+  background-color: transparent !important;
+  font-family: var(--md-text-font) !important;
+}
+
+/* 浅色主题样式 */
+[data-md-color-scheme="default"] .#__mermaid_0 .actor,
+ .#__mermaid_0 .note {
+  fill: #d4ebff !important;
+  stroke: #7aa3e5 !important;
+}
+[data-md-color-scheme="default"] {
+  --md-mermaid-sequence-actor-bg-color: #ddedfc !important;
+  --md-mermaid-sequence-actor-border-color: #7aa3e5 !important;
+  --md-mermaid-sequence-actor-fg-color: #1e1e1e !important;
+  --md-mermaid-sequence-note-bg-color:  #ddedfc !important;
+  --md-mermaid-sequence-note-border-color: #7aa3e5 !important;
+}
+
