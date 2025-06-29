@@ -284,11 +284,11 @@ img:hover {
   background: var(--md-default-bg-color);
   border-radius: 10px;
   padding: 0.5rem !important;
-  width: 98%;
+  width: 100%;
 }
 
 .md-nav__item {
-  margin: 0.3rem 0;
+  margin: 0.1rem 0;
 }
 
 .md-nav__link {
@@ -482,12 +482,12 @@ pre code {
 }
 
 /* 浅色主题样式 */
-[data-md-color-scheme="default"] .#__mermaid_0 .actor,
- .#__mermaid_0 .note {
-  fill: #d4ebff !important;
-  stroke: #7aa3e5 !important;
-}
 [data-md-color-scheme="default"] {
+  --md-mermaid-sequence-line-color: #666666;
+  --md-mermaid-sequence-message-line-color: #333333;
+  --md-mermaid-sequence-actorman-line-color: #7aa3e5;
+  --md-mermaid-sequence-message-fg-color: #333333; 
+  --md-mermaid-edge-label-fg-color: #555555;       
   --md-mermaid-sequence-actor-bg-color: #ddedfc !important;
   --md-mermaid-sequence-actor-border-color: #7aa3e5 !important;
   --md-mermaid-sequence-actor-fg-color: #1e1e1e !important;
@@ -495,3 +495,40 @@ pre code {
   --md-mermaid-sequence-note-border-color: #7aa3e5 !important;
 }
 
+
+/* 深色主题样式 */
+[data-md-color-scheme="slate"] {
+  --md-mermaid-sequence-line-color: #888888;
+  --md-mermaid-sequence-message-line-color: #e0e0e0;
+  --md-mermaid-sequence-actorman-line-color: #4a6ea9;
+  --md-mermaid-sequence-message-fg-color: #e0e0e0;
+  --md-mermaid-edge-label-fg-color: #aaaaaa;
+  --md-mermaid-sequence-actor-bg-color:  #343434  !important;
+  --md-mermaid-sequence-actor-fg-color: #f1efef !important;
+  --md-mermaid-sequence-note-bg-color:  #343434!important;
+  --md-mermaid-sequence-note-fg-color: #f1efef !important;
+
+}
+
+.#__mermaid_0 .actor,
+.#__mermaid_0 .note {
+  fill:var(--md-mermaid-sequence-actor-color) !important;
+  stroke: auto;
+  font-weight: 600 !important;
+}
+
+
+.#__mermaid_0 .actor-line,
+.#__mermaid_0 .messageLine0,
+.#__mermaid_0 .messageLine1 {
+  stroke: var(--md-mermaid-sequence-line-color) !important;
+}
+
+.#__mermaid_0 .messageText {
+  fill: var(--md-mermaid-sequence-message-fg-color) !important;
+}
+
+.#__mermaid_0 .edgeLabel {
+  color: var(--md-mermaid-edge-label-fg-color) !important;
+  background-color: transparent !important;
+}

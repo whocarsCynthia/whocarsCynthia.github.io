@@ -3,17 +3,14 @@ title: 人类生存指南
 comments: False
 ---
 
-## Personality
+!!! note ""
+    “每个人细究起来都蛮有意思，只是很少有被人仔细看见的机会，以至于被仔细看见这件事，有点近似于爱。”
 
-### Engaging Tests
-
-### Boring Deep Talk
-
-## Overthinking
+## Coming of Age
 
 <div class="encrypted-section" data-password="0610">
   <div class="prompt">
-    <h3>Coming of Age </h3>
+    <h3>Romance</h3><br/>
     <p>🔒 A simple bouquet of white tulips for you </p>
     <input type="password" class="pw-input" placeholder="输入访问密码">
     <button class="encrypt-btn md-button">解锁内容</button>
@@ -54,4 +51,7 @@ document.querySelectorAll('.encrypt-btn').forEach(btn => {
 });
 </script>
 
-### Family of Origin
+  ### Gloom
+
+
+## Recording  

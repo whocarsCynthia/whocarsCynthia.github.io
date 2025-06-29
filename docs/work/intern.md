@@ -3,24 +3,7 @@ title: 人类生存指南
 comments: False
 ---
 
-# 牛马手记
-
-
-点击查看守则：
-??? example "牛马须知"
-    - 主动介绍自己<br>    
-    - You deserve everything.  
-    - 让领导知道你都干了啥
-    - 科长箴言：不要自证清白
-    - 前辈扔的活不要任劳任怨
-    - 领导面前积极表现不害羞
-    
-???+ tip "代办"
-    - [ ] 宣讲ppt<br>
-    - [ ] 跟进项目安排<br>
-
-## Internship 
-### A Government Agency
+## A Government Agency
     过渡一下。  
     工作时间：8:30-17:00，午饭午休11:20-13:30。
     工作周期：06/23-  
@@ -80,78 +63,3 @@ comments: False
      
 
 
-## Interview
-
-<div class="grid cards" markdown>
-
--   :material-clock-fast:{ .lg .middle } __字节跳动面试__
-
-    ---
-
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
-
-    [:octicons-arrow-right-24: Getting started](#)
-    
-    -   :material-clock-fast:{ .lg .middle } __研究所面试__
-
-    ---
-
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
-
-    [:octicons-arrow-right-24: Getting started](#)
-
-    -   :material-clock-fast:{ .lg .middle } __帆软电话面试__
-
-    ---
-
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
-
-    [:octicons-arrow-right-24: Getting started](#)
-
-
--   :material-format-font:{ .lg .middle } __腾讯综测__
-
-    ---
-
-    Change the colors, fonts, language, icons, logo and more with a few lines
-
-    [:octicons-arrow-right-24: Customization](#)
-
--   :material-scale-balance:{ .lg .middle } __帆软笔试__
-
-    ---
-
-    Material for MkDocs is licensed under MIT and available on [GitHub]
-
-    [:octicons-arrow-right-24: License](#)
-
-    -   :material-scale-balance:{ .lg .middle } __虾皮笔试__
-
-    ---
-
-    Material for MkDocs is licensed under MIT and available on [GitHub]
-
-    [:octicons-arrow-right-24: License](#)
-
-    -   :material-scale-balance:{ .lg .middle } __美团笔试__
-
-    ---
-
-    Material for MkDocs is licensed under MIT and available on [GitHub]
-
-    [:octicons-arrow-right-24: License](#)
-
-    -   :material-scale-balance:{ .lg .middle } __华为笔试__
-
-    ---
-
-    机试太难了，考三道算法大题。跑如路。
-
-    [:octicons-arrow-right-24: License](#)
-
-</div>
-
-## CV Assistance

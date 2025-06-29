@@ -53,6 +53,7 @@ theme:
   # content
     - toc.follow
     - toc.integrate
+    - content.toc
     - content.code.annotate  
     - content.code.copy  
     - content.tabs.link 
@@ -171,16 +172,53 @@ extra_javascript:
   - javascripts/MathJax-3.2.2/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
   - javascripts/extra.js
+  - javascripts/image-path.js
   # - https://polyfill.alicdn.com/polyfill.min.js?features=es6
 
 nav:
   - Home: index.md
-  - 生活访问: daily.md
-  - 牛马手记: working.md
-  - 课程学习: courses.md
-  - 知识囤货: studying.md
-  - 人格探索: emotion.md
-  - 脑洞发散: write.md
+  - 生活访问: 
+      - Tracking: life/track.md
+      - Guide: life/guide.md
+      - Entertainment: life/entertain.md
+      
+
+  - 牛马手记: 
+      - Abstract: work/fore.md
+      - Internship: work/intern.md
+      - Interview: work/interview.md
+      - CV Assistant: work/cv.md
+
+  - 校园游荡: 
+      - Abstract: college/fore.md
+      - Course Evaluation: college/course.md
+      - Major Overview: college/major.md
+      - Core Courses: 
+          - First Year: college/core/first.md
+          - Second Year: college/core/second.md
+          - Third Year: college/core/third.md
+
+      - Elective Courses: college/elective.md  
+      - Practicum & Volunteering: college/practice.md
+      - Related Competiton: college/competition.md
+
+  - 知识囤货: 
+      - Abstract: study/foreword.md
+      - Japanese: study/japanese.md
+      - DataBase & SQL: study/sql.md
+      - Business Operation: study/businessop.md
+
+  - 人格探索: 
+      - Tests: privacy/test.md
+      - Chats: privacy/chat.md
+      - Emotions: privacy/emotion.md
+      - Puzzle: privacy/puzzle.md
+
+  - 脑洞发散: 
+      - 素材: write/material.md
+      - 灵感: write/idea.md
+      - 随笔: write/jotting.md
+      - 练习: write/practice.md
   
   
   
@@ -192,6 +230,8 @@ plugins:
         - zh
         - en
         - ja
+        - ko
+        - jp
       separator: '[\s\u200b\-]'
   
   # heti插件
