@@ -2,6 +2,7 @@
 title: 人类生存指南
 comments: False
 ---
+Last update: {{ git_revision_date_localized }}
 
 ## Processing
 <div class="grid cards" markdown>
