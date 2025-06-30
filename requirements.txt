@@ -6,3 +6,5 @@ mkdocs-statistics-plugin
 mdx_truly_sane_lists
 mkdocs-video
 mkdocs-git-revision-date-localized-plugin
+mkdocs-material>=9.0.0
+mkdocs-document-dates>=3.1.0
