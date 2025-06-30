@@ -3,7 +3,7 @@ title: 人类生存指南
 comments: False
 ---
 
-这一部分将收集NJU的一切事。
+这一部分将收集 *校园学习* 相关的一些事。
 
 !!! abstract
     1. [ ] 课程评价
@@ -13,5 +13,7 @@ comments: False
     5. [ ] 实践与志愿
     6. [ ] 相关赛事
 
-{==unsolicited Advice==}
+{==Unsolicited Advice==}  
+
 - 焦虑是广泛存在的。
+- 选择大于努力。

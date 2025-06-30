@@ -2,79 +2,176 @@
 title: 人类生存指南
 comments: False
 ---
-Last update: {{ git_revision_date_localized }}
 
 ## Processing
 <div class="grid cards" markdown>
 
--   :material-clock-fast:{ .lg .middle } __字节跳动面试__
+-       
+   :fontawesome-brands-tiktok:{ .lg .middle } __字节跳动面试__
 
-    ---
+    1.  商业化战略与运营【日常实习】【6.8-6.27二面挂】   
+        一面主要了解个人项目经历，评估一下个人素质；二面需要体现解决实际业务问题和数据分析题目的能力。  
 
-    一面  
-    二面  
-
-    [:octicons-arrow-right-24: Getting started](#)
+    [:octicons-arrow-right-24: 校招网申](https://jobs.bytedance.com/campus)
     
-    -   :material-clock-fast:{ .lg .middle } __研究所面试__
+    ---
+   :material-progress-close:{ .lg .middle } __大数据研究院面试__
+
+    咨询规划实习生【日常实习】【5.10-5.26拒】  
+    苏州国企下属的人工智能重点实验室，感觉蛮缺人。面试主要考察政策和学术结合这块的经历。最后因为各种因素拒了。
+
+    ---
+    :material-progress-close:{ .lg .middle } __帆软电话面试__
+
+    产品运营、产品经理【千帆计划】【4.16-6.7 主管审核挂】   
+    4.28参与产品类笔试。5月被捞电话面说调剂到产运，结果苦等两星期没二面就给挂了。非常雷人。  
+
+-   
+   :material-send-variant-outline:{ .lg .middle } __帆软笔试__
+
+    产品类【千帆计划】  
+    笔试包括15道行测题、5道IT基础选择题、2道问答题。小红书可以搜到题库。    
+    没什么印象了，问答题貌似问了你最喜欢的书和对你影响最大的人……
 
     ---
 
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
+    :material-send-variant-outline:{ .lg .middle } __虾皮笔试__
 
-    [:octicons-arrow-right-24: Getting started](#)
-
-    -   :material-clock-fast:{ .lg .middle } __帆软电话面试__
+    管培生【领航实习计划】【4.1 笔试挂】  
+    第一次正式笔试，全英文，包括财务信息材料分析计算、数推、图推等等。时间非常非常赶，纯乱选。小红书搜经验和题库。
 
     ---
 
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
+    :material-send-variant-outline:{ .lg .middle } __美团笔试__
 
-    [:octicons-arrow-right-24: Getting started](#)
+    产品运营【转正实习】【5.29-6.1 海笔挂】  
+    推理判断、数推、图推、数据库与大模型基础知识  
 
-
--   :material-format-font:{ .lg .middle } __腾讯综测__
-
-    ---
-
-    Change the colors, fonts, language, icons, logo and more with a few lines
-
-    [:octicons-arrow-right-24: Customization](#)
-
--   :material-scale-balance:{ .lg .middle } __帆软笔试__
+    [:octicons-arrow-right-24: 校招网申](https://zhaopin.meituan.com/web/campus)
 
     ---
 
-    Material for MkDocs is licensed under MIT and available on [GitHub]
+    :material-send-variant-outline:{ .lg .middle } __华为笔试__
 
-    [:octicons-arrow-right-24: License](#)
+    产品开发师【日常实习】【跑如路】    
+    机试太难，考三道算法大题。取消了。hc挺多的样子，会一点编程语言的人hr都会来问。
 
-    -   :material-scale-balance:{ .lg .middle } __虾皮笔试__
+    [:octicons-arrow-right-24: 校招网申](https://career.huawei.com/reccampportal/portal5/index.html)
 
-    ---
+-   :fontawesome-brands-weixin:{ .lg .middle } __腾讯综测__
 
-    Material for MkDocs is licensed under MIT and available on [GitHub]
+    产品运营【日常实习】【5.4-5.6 综测无回应】    
+    综测没什么业务相关，感觉主要是情商测试还有行测。大概是简历挂。  
 
-    [:octicons-arrow-right-24: License](#)
-
-    -   :material-scale-balance:{ .lg .middle } __美团笔试__
-
-    ---
-
-    Material for MkDocs is licensed under MIT and available on [GitHub]
-
-    [:octicons-arrow-right-24: License](#)
-
-    -   :material-scale-balance:{ .lg .middle } __华为笔试__
-
-    ---
-
-    机试太难了，考三道算法大题。跑如路。
-
-    [:octicons-arrow-right-24: License](#)
+    [:octicons-arrow-right-24: 校招网申](https://join.qq.com/)
 
 </div>
 
+??? question "简历挂或无消息"  
+    1. 字节跳动-行业运营广告业务实习生|电商策略运营实习生|电商招商运营实习生|短剧小说行业广告策略|数据运营实习生|经营策略实习生；  
+    2. 美团-智能运营实习生|AI产品运营实习生|内容运营实习生|多渠道管理运营分析实习生|营销产品经理实习生；  
+    3. 万兴科技-产品策划实习生|用户运营实习生；  
+    4. 爱奇艺-内容策略分析实习生|产品实习生（用户体验）；   
+    5. 搜狐-产品运营实习生；  
+    6. 荣耀-用户研究代表；  
+    7.  vivo-互联网产品经理-实习；  
+    8.  特斯拉-用户增长与运营实习生；  
+    9.  完美世界-游戏用户研究；  
+    10. 饿了么-产品经理；  
+    11. 阿里集团-智能信息-搜索业务-产品经理； 
+    12. 阿里集团-国际数字商业集团-AI Business-数据；   
+    13. 阿里大文娱集团-？？；  
+    14. 网易-音乐事业部-数据分析实习生（长音频&直播）|产品实习生；  
+    15. 百度-大模型数据分析实习生|战略分析实习生|大模型商业分析实习18. 生|用户研究实习生；  
+    16. 得物-用户研究员|数据分析师；  
+    17. 科大讯飞-产品运营实习生；  
+    18. 小米-平台运营实习|用户研究实习；
+    19. 滴滴-用户运营|数据分析师|商业数据分析；  
+    20. 月之暗面-大模型产品经理实习生；  
+    21. 帆软-行业化顾问；
+    22. 喜马拉雅-数据分析实习生；  
+    23. 博西家电-数据实习生；  
+    24. 卡特彼勒-数据分析实习生；   
+    25. 北京天润融通-产品经理实习生；  
+    26. 陌陌-增长产品实习生；  
+    27. 携程-业务运营实习生；  
+    28. 蔚来-文化传播实习；
+    29. 高途-用户研究实习生；  
+    30. 去哪儿网-产品运营实习生；  
+    31. SHEIN-大数据平台产品经理实习生；  
+    32. 360-商业化产品实习生；  
+    33. 作业帮-战略分析实习生；  
+    34. 同花顺-AI产品运营实习生；  
+    35. 纷享销客-产品运营实习生；  
+    36. 网易有道领世-产品运营实习生；  
+    37. 快手-战略分析|策略产品实习生；  
+    38. 飞书深诺-商业化产品运营实习生|行业研究实习；  
+    39. 东方财富集团-产品运营实习生；  
+    40. 迪卡侬中国-电商战略发展部实习生；  
+    41. 魔法原子-战略运营实习生；  
+    42. 追觅科技-新业务战略洞察实习生|数据分析实习生；  
+    43. 微博-商业数据分析实习生；  
+    44. 紫光云数-数据实习生；  
+    45. T3出行领行科技-数据分析实习生；    
+    46. bilibili-AI产品经理实习生|数据分析实习生；
+    47. Cupshe-数据分析实习|市场部实习： 
+    48. 蚂蚁集团-科技方向研究助理；  
+    49. OC&C-运动服饰项目PTA招聘；  
+    50. 联想-数据分析工程师|AI产品与数据分析实习生；   
+    51. 晋陵集团-文旅类项目实习；  
+    52. 浩鲸科技-运营实习生【拒】；  
+    53. 焦点科技-B端客户运营【拒】；  
+    54. 中智国际人才资源-人才顾问助理岗实习生【拒】； 
+
+
+
 ## Lessons
+
+1. 简历与JD的匹配度； 
+2. 简历用语要“业务”一些，可以用以下prompt让AI调整：
+!!! info "Prompt"
+    目标：将我的原始简历内容转化为更具**商业竞争力、结果导向**的专业表述，严格基于事实不虚构，重点提升以下维度：  
+    1. **成果量化**：补充可验证的业绩数据（金额/百分比/排名等）  
+    2. **方法论显性化**：明确专业工具/模型/框架的使用  
+    3. **商业价值**：强调对组织/客户/用户的实际影响  
+    4. **岗位关键词**：嵌入行业标准术语  
+    **优化原则**：  
+    - 所有修改必须100%基于我提供的事实  
+    - 优先使用STAR法则（情境-任务-行动-结果）结构化表达  
+    - 数据缺失处用[需补充]标注，我可后续提供  
+    **输入格式要求**：  
+    1. 提供原始简历内容（建议分模块：教育/工作/项目等）  
+    2. 说明目标岗位类型（如咨询/金融/互联网运营等）  
+    3. 列出岗位核心能力需求（可从JD中提取）  
+    **输出规范**：  
+    - 每段经历按"强动词+量化结果+商业影响"结构改写  
+    - 区分必要性数据[必填]与可选数据[可选]  
+    **参考案例**：  
+    ▶ 原始描述：  
+    "负责公众号运营，发布多篇推文"  
+    ▶ 优化后：  
+    "运营XX垂直领域公众号（粉丝量[需补充]），通过**用户分群推送策略**实现打开率提升25%[必填]，其中3篇行业分析推文被[XX机构]转载，带动商务合作询盘量增长15%[可选]"  
+    **我的需求**：  
+    [请粘贴需要优化的原始简历内容]  
+    目标岗位：[填写岗位类型]  
+    岗位核心能力要求：[从JD摘录3-5条]  
+
+3. 学术与调研经历对于行研/咨询类有用，对其他偏市场的岗位都没啥用，在简历上的优先度不高；  
+4. . 产品的bar非常高；  
+5. 不要怕鸽甲方；  
+6. 垂直固然重要，有更广泛的探索机会也是好事,保持心态；  
+7. 保持心态；
+8. 保持心态；
+9. 保持心态！
+
+
+
+
+## 网申链接
+
+- [ ] [网易校招](https://hr.163.com/job-list.html?workType=1)  
+- [ ] [得物校招](https://campus.dewu.com/578078)  
+- [ ] [小红书校招](https://job.xiaohongshu.com/campus)  
+- [ ] [快手校招](https://campus.kuaishou.cn/recruit/campus/e/#/campus/index/)  
+- [ ] [腾讯音乐校招](https://join.tencentmusic.com/campus)  
+- [ ] [Momenta](https://momenta.jobs.feishu.cn/intern)
