@@ -250,7 +250,7 @@ plugins:
       type: datetime
       timezone: Asia/Shanghai
       locale: zh
-      enable_creation_date: true
+      enable_creation_date: false
       exclude:
         - index.md
       strict: false
