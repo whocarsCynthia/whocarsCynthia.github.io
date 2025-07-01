@@ -7,8 +7,10 @@ comments: true
 ---
 
 ## START
-这里有张图片加载中……
-[![](pic/coverfig.jpg){: .center-img}](college/abstract.md/)
+这里有张图片加载中，点击可跳转至【校园游荡】；  
+推荐善用左侧目录浏览本站，非常欢迎留下足迹。
+
+[![](pic/coverfig.jpg){: .center-img}](college/fore.md/)
 
 ???+ note "正在学习"
     - TOEFL   
@@ -62,8 +64,8 @@ comments: true
 
 === "DeveloperLog" 
 
-    - 20250701  持续腱鞘炎中
-      更新了子页面的内容；  
+    - 20250701  持续腱鞘炎中  
+      更新了子页面的内容；   
       太尴尬了评论区绑到别人家了，赶紧替换源码；  
 
     - 20250630  好多了  

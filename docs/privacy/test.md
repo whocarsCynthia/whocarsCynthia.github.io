@@ -35,6 +35,7 @@ comments: False
 
 ## Relationship
 
-1. ![边界感Bingo](../pic/distancebingo.jpg) 
+1. 边界感Bingo   
+![](../pic/distancebingo.jpg) 
 
 2. [性偏好测试](https://xlcs.anmeisheng.com/h5/#/pages/home/evaluation?exam_id=72&u=19647)

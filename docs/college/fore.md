@@ -6,12 +6,12 @@ comments: False
 这一部分将收集 *校园学习* 相关的一些事。
 
 !!! abstract
-    1. [ ] 课程评价
-    2. [ ] 专业测评
-    3. [ ] 专业课笔记
-    4. [ ] 选修课笔记
-    5. [ ] 相关赛事
-    6. [ ] 留学信息
+    1. [ ] [课程评价](course.md)
+    2. [ ] [专业测评](major.md)
+    3. [ ] [专业课笔记](core/jl.md)
+    4. [ ] [选修课笔记](elective.md)
+    5. [ ] [相关赛事](competition.md)
+    6. [ ] [留学信息](abroad.md)
 
 
 {==Unsolicited Advice==}  
