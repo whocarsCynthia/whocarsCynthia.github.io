@@ -8,7 +8,7 @@ comments: true
 
 ## START
 这里有张图片加载中……
-[![](pic/coverfig.jpg){: .center-img}](life/entertain.md/)
+[![](pic/coverfig.jpg){: .center-img}](college/abstract.md/)
 
 ???+ note "正在学习"
     - TOEFL   
