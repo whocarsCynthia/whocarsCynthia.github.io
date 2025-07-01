@@ -193,14 +193,14 @@ nav:
       - Abstract: college/fore.md
       - Course Evaluation: college/course.md
       - Major Overview: college/major.md
-      - Core Courses: 
+      - Note Core Courses: 
           - First Year: college/core/first.md
           - Second Year: college/core/second.md
           - Third Year: college/core/third.md
 
-      - Elective Courses: college/elective.md  
-      - Practicum & Volunteering: college/practice.md
+      - Note Elective Courses: college/elective.md  
       - Related Competiton: college/competition.md
+      - Study Abroad: college/abroad.md
 
   - 知识囤货: 
       - Abstract: study/foreword.md
