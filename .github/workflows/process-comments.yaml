@@ -9,16 +9,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 步骤1：解析Discussion评论内容
+      # 步骤1：安全解析Discussion评论
       - name: Parse Comment
         id: parse
+        env:
+          COMMENT_BODY: ${{ toJson(github.event.comment.body) }}
         run: |
-          # 调试输出原始事件数据
-          echo "Event JSON: ${{ toJson(github.event) }}"
+          # 安全写入事件数据到临时文件
+          echo "$COMMENT_BODY" > comment_body.json
           
-          if [[ "${{ github.event.comment.body }}" =~ "!contribute" ]]; then
-            CONTENT=$(echo "${{ github.event.comment.body }}" | 
-                      sed -e 's/!contribute//g' -e 's/"/\\"/g' -e 's/`/\\`/g')
+          # 使用jq解析JSON内容
+          if grep -q '!contribute' comment_body.json; then
+            CONTENT=$(jq -r 'gsub("!contribute"; "")' comment_body.json | \
+                     sed -e 's/"/\\"/g' -e 's/`/\\`/g')
             echo "CONTENT=${CONTENT}" >> $GITHUB_OUTPUT
             echo "HAS_CONTRIBUTION=true" >> $GITHUB_OUTPUT
           fi
