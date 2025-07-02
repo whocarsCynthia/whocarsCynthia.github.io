@@ -1,4 +1,4 @@
-name: Process Giscus Comments
+name: Process Giscus Contributions
 on:
   issue_comment:
     types: [created]
@@ -8,20 +8,44 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      # 步骤1：解析评论内容
       - name: Parse Comment
         id: parse
         run: |
-          # 检查评论是否包含特定标记（如!contribute）
           if [[ "${{ github.event.comment.body }}" == *"!contribute"* ]]; then
-            echo "CONTENT=$(echo '${{ github.event.comment.body }}' | sed -e 's/!contribute//g')" >> $GITHUB_OUTPUT
+            # 提取有效内容并转义特殊字符
+            CONTENT=$(echo "${{ github.event.comment.body }}" | 
+                      sed -e 's/!contribute//g' -e 's/"/\\"/g' -e 's/`/\\`/g')
+            echo "CONTENT=${CONTENT}" >> $GITHUB_OUTPUT
+            echo "HAS_CONTRIBUTION=true" >> $GITHUB_OUTPUT
           fi
-      - name: Update File
-        if: steps.parse.outputs.CONTENT
+
+      # 步骤2：更新Markdown文件
+      - name: Update Markdown
+        if: steps.parse.outputs.HAS_CONTRIBUTION == 'true'
         run: |
-          # 使用sed插入内容到指定位置
-          sed -i "/<div id=\"user-contributions\"><\/div>/a \n${{ steps.parse.outputs.CONTENT }}" docs/profession.md
+          # 添加分隔线和贡献内容
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
+          echo -e "\n\n---\n**贡献于 ${TIMESTAMP}**\n\n${{ steps.parse.outputs.CONTENT }" \
+            >> docs/college/major.md
+
+      # 步骤3：自动创建PR
       - name: Create PR
+        if: steps.parse.outputs.HAS_CONTRIBUTION == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Add user contribution from Giscus"
+          commit-message: "Add user contribution from Giscus comment"
+          title: "📝 Update from Giscus contribution"
+          body: "Automated update triggered by comment #${{ github.event.comment.id }}"
+          branch: "giscus-contribution-${{ github.run_id }}"
+
+  # 步骤4：自动部署（添加新job）
+  deploy:
+    needs: process
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Triggering site rebuild..."
