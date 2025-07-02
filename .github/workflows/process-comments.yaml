@@ -8,14 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      # 步骤1：解析评论内容
+
+      # 步骤1：解析Discussion评论内容
       - name: Parse Comment
         id: parse
         run: |
-          if [[ "${{ github.event.discussion_comment.body }}" == *"!contribute"* ]]; then
-            # 提取有效内容并转义特殊字符
-            CONTENT=$(echo "${{ github.event.discussion_comment.body }}" | 
+          # 调试输出原始事件数据
+          echo "Event JSON: ${{ toJson(github.event) }}"
+          
+          if [[ "${{ github.event.comment.body }}" =~ "!contribute" ]]; then
+            CONTENT=$(echo "${{ github.event.comment.body }}" | 
                       sed -e 's/!contribute//g' -e 's/"/\\"/g' -e 's/`/\\`/g')
             echo "CONTENT=${CONTENT}" >> $GITHUB_OUTPUT
             echo "HAS_CONTRIBUTION=true" >> $GITHUB_OUTPUT
@@ -25,7 +27,6 @@ jobs:
       - name: Update Markdown
         if: steps.parse.outputs.HAS_CONTRIBUTION == 'true'
         run: |
-          # 添加分隔线和贡献内容
           TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
           echo -e "\n\n---\n**贡献于 ${TIMESTAMP}**\n\n${{ steps.parse.outputs.CONTENT }}" \
             >> docs/college/major.md
@@ -36,16 +37,14 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Add user contribution from Giscus comment"
-          title: "📝 Update from Giscus contribution"
-          body: "Automated update triggered by discussion comment #${{ github.event.discussion_comment.id }}"
-          branch: "giscus-contribution-${{ github.run_id }}"
-
-  # 步骤4：自动部署
-  deploy:
-    needs: process
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "Triggering site rebuild..."
+          commit-message: "Add user contribution from Discussion #${{ github.event.discussion.number }}"
+          title: "📝 Update from Discussion #${{ github.event.discussion.number }}"
+          body: |
+            Automated update triggered by:
+            - Discussion: #${{ github.event.discussion.number }}
+            - Comment ID: ${{ github.event.comment.id }}
+            Original content:
+            ```markdown
+            ${{ steps.parse.outputs.CONTENT }}
+            ```
+          branch: "discussion-contrib-${{ github.event.comment.id }}"

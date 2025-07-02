@@ -229,8 +229,6 @@ plugins:
         - zh
         - en
         - ja
-        - ko
-        - jp
       separator: '[\s\u200b\-]'
   
   # heti插件
