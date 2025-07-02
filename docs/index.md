@@ -47,6 +47,7 @@ comments: true
     - [x] gh-pages 无法自动部署
     - [ ] 所有表格无法同宽
     - [x] 序列图颜色样式错误
+    - [ ] 页面更新datetime的显示似乎有误
 
 === "Enhancements"
     - [x] 封面自定义
@@ -63,6 +64,8 @@ comments: true
 
 
 === "DeveloperLog" 
+    - 20250702  腱鞘炎中  
+      更新了子页面内容；   
 
     - 20250701  持续腱鞘炎中  
       更新了子页面的内容；   
