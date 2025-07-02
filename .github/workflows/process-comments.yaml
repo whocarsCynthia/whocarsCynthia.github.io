@@ -1,6 +1,6 @@
 name: Process Giscus Contributions
 on:
-  issue_comment:
+  discussion_comment:
     types: [created]
 
 jobs:
@@ -13,9 +13,9 @@ jobs:
       - name: Parse Comment
         id: parse
         run: |
-          if [[ "${{ github.event.comment.body }}" == *"!contribute"* ]]; then
+          if [[ "${{ github.event.discussion_comment.body }}" == *"!contribute"* ]]; then
             # 提取有效内容并转义特殊字符
-            CONTENT=$(echo "${{ github.event.comment.body }}" | 
+            CONTENT=$(echo "${{ github.event.discussion_comment.body }}" | 
                       sed -e 's/!contribute//g' -e 's/"/\\"/g' -e 's/`/\\`/g')
             echo "CONTENT=${CONTENT}" >> $GITHUB_OUTPUT
             echo "HAS_CONTRIBUTION=true" >> $GITHUB_OUTPUT
@@ -38,7 +38,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Add user contribution from Giscus comment"
           title: "📝 Update from Giscus contribution"
-          body: "Automated update triggered by comment #${{ github.event.comment.id }}"
+          body: "Automated update triggered by discussion comment #${{ github.event.discussion_comment.id }}"
           branch: "giscus-contribution-${{ github.run_id }}"
 
   # 步骤4：自动部署
