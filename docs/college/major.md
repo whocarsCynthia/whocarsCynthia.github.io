@@ -52,10 +52,11 @@ comments: False
 ``` sql title="格式"  
 复制以下全部内容（一定要有"!contribute"），修改后发布在评论区；  
 评论支持markdown语法；  
-等待审核之后就可以显示在页面上啦： 
+等待我手动审核之后就可以显示在页面上啦： 
 
 !contribute  
 #### 更改专业名称，最好写英文，请勿删除井号  
 *更改任何你喜欢的代号，请勿删除星号* ：更改评价内容……  
 ```
-👉 [评论区指路](https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions/12)
+💡 [Markdown语法学习](https://markdown.com.cn/basic-syntax/line-breaks.html)  
+👉 [评论区指路，请发布在这里](https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions/12)

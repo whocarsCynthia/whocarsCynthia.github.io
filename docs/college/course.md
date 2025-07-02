@@ -1,10 +1,11 @@
 ---
 title: 人类生存指南
-comments: true
+comments: True
 ---
-欢迎在页面底部评论区补充！
+欢迎在评论区补充！
 
-## Bussiness
+## Courses
+### Bussiness
 
 ???+ note "课程评价"
     - 国际金融 ★★★★☆  
@@ -62,7 +63,7 @@ comments: true
       考核情况：平时作业 + 期末闭卷考，重点明确；给分很好；  
       
 
-## Economics
+### Economics
 
 ???+ note "课程评价"
     - 全球化与环境经济学 ★★★★☆  
@@ -137,7 +138,7 @@ comments: true
       应用价值：对读资本论和马克思还是有一定帮助；  
       考核情况：期末闭卷考，难度略大，会考上课解读的内容；给分一般；          
 
-## Psychology
+### Psychology
 
 ???+ note "课程评价"
     - 认知心理学 ★★★★☆  
@@ -168,7 +169,7 @@ comments: true
       考核情况：互动 + 期末课程报告；给分好；  
 
 
-## Math
+### Math
 ???+ note "课程评价"
     - 概率论与数理统计 ★★★★☆  
       师资:fds  
@@ -179,7 +180,7 @@ comments: true
       应用价值：科研基础；  
       考核情况：平时作业 + 期中考试 + 期末考试；给分严格；
 
-## Language
+### Language
 ???+ note "课程评价"
     - 二外日语 ★★★★★  
       师资:wwj  
@@ -191,7 +192,7 @@ comments: true
       考核情况：未知（蹭了半学期的课）；
 
 
-## Computer
+### Computer
 ???+ note "课程评价"
     - Python程序设计 ★☆☆☆☆    
       师资:zj  
@@ -202,7 +203,7 @@ comments: true
       应用价值：学点编程是**必要**的，但听我的，打开b站学；  
       考核情况：小组项目设计pre + 期末上机考试，略难；给分还行；  
 
-## Arts
+### Arts
 
 ???+ note "课程评价"
     - 杜甫研究 ★★★★★  
@@ -241,4 +242,29 @@ comments: true
       应用价值：唐诗解读；  
       考核情况：期中小组讨论+ 期末pre + 论文；给分未知； 
 
-## Others
+### Others
+
+
+## Your CONTENT
+用户贡献评价
+<div id="user-contributions"></div>
+
+``` sql title="格式"  
+复制以下全部内容（一定要有"!course-review"），修改后发布在评论区；  
+评论支持markdown语法；  
+"九个字段名称不可更改！！且必须要有内容！！"
+等待我手动审核之后就可以显示在页面上啦：  
+
+!course-review
+课程名称: 课程全名  
+评分: ★★☆☆☆ 或 5分制；   
+师资: 教师姓名缩写  
+简评：一句话总结  
+人数：约XX人  
+课堂体验：详细描述  
+课程难度：低/中/高，事多事少，考察出勤情况  
+应用价值：描述  
+考核情况：考试/论文/作业等  
+```
+💡 [Markdown语法学习](https://markdown.com.cn/basic-syntax/line-breaks.html)  
+👉 [评论区指路，请发布在这里](https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions)
