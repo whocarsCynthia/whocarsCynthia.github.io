@@ -1,0 +1,27 @@
+name: Process Giscus Comments
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse Comment
+        id: parse
+        run: |
+          # 检查评论是否包含特定标记（如!contribute）
+          if [[ "${{ github.event.comment.body }}" == *"!contribute"* ]]; then
+            echo "CONTENT=$(echo '${{ github.event.comment.body }}' | sed -e 's/!contribute//g')" >> $GITHUB_OUTPUT
+          fi
+      - name: Update File
+        if: steps.parse.outputs.CONTENT
+        run: |
+          # 使用sed插入内容到指定位置
+          sed -i "/<div id=\"user-contributions\"><\/div>/a \n${{ steps.parse.outputs.CONTENT }}" docs/profession.md
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Add user contribution from Giscus"

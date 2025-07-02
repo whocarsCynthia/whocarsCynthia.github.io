@@ -1,6 +1,6 @@
 ---
 title: 人类生存指南
-comments: False
+comments: True
 ---
 要采访大家吗？大概是简单的关于自己专业的评价以及给后来人的建议。  
 !!! warning "宇宙免责声明"
@@ -62,14 +62,11 @@ comments: False
 ## Computer Science
 
 ## HERE GOES YOUR CONTENT
-
-<div class="contribution-container">
-  <div class="contribution-header">
-    <h3>用户分享的专业体验</h3>
-    <a href="https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions/new?category=major" 
-       class="contribution-button" target="_blank">
-      分享你的专业体验
-    </a>
-  </div>
-  <div id="discussions-container" class="discussions-grid"></div>
-</div>
+用户贡献评价
+<div id="user-contributions"></div>
+    
+    格式：
+    !contribute
+    ## 更改专业名称
+    *更改任何你喜欢的代号* ：更改评价内容……
+    

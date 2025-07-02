@@ -583,27 +583,3 @@ pre code {
     }
 }
 
-/* 评价卡片 */
-.review-card {
-  margin-bottom: 1.5rem;
-  border-left: 4px solid var(--md-primary-fg-color);
-  padding-left: 1rem;
-}
-
-.review-card h3 {
-  margin-top: 0.5em;
-  margin-bottom: 0.3em;
-  color: var(--md-default-fg-color--light);
-}
-
-.review-card blockquote {
-  margin-left: 0;
-  padding: 0.5rem 0.8rem;
-  background-color: var(--md-code-bg-color);
-  border-radius: 4px;
-}
-
-/* 错误状态 */
-.error {
-  color: var(--md-typeset-a-color);
-}
