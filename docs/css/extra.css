@@ -575,6 +575,21 @@ pre code {
     }
 }
 
+/* 特制的对话气泡 */
+.dialogue-bubble.spec {
+    margin: 5px 0;
+
+    [data-md-color-scheme="default"] & {
+        background-color: #fcd8e0;
+        border-left: 3px solid #f78ba2;
+    }
+    
+    [data-md-color-scheme="slate"] & {
+        background-color: #7d243d;
+        border-right: 3px solid #f66484;
+    }
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
     .dialogue-bubble, .dialogue-bubble.mine {
