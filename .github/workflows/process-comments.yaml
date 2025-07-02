@@ -27,7 +27,7 @@ jobs:
         run: |
           # 添加分隔线和贡献内容
           TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
-          echo -e "\n\n---\n**贡献于 ${TIMESTAMP}**\n\n${{ steps.parse.outputs.CONTENT }" \
+          echo -e "\n\n---\n**贡献于 ${TIMESTAMP}**\n\n${{ steps.parse.outputs.CONTENT }}" \
             >> docs/college/major.md
 
       # 步骤3：自动创建PR
@@ -41,7 +41,7 @@ jobs:
           body: "Automated update triggered by comment #${{ github.event.comment.id }}"
           branch: "giscus-contribution-${{ github.run_id }}"
 
-  # 步骤4：自动部署（添加新job）
+  # 步骤4：自动部署
   deploy:
     needs: process
     runs-on: ubuntu-latest
