@@ -43,35 +43,16 @@ comments: True
  &emsp;&emsp;3. 分流进生科院的学生除了真爱卷王以外全为摆子，推荐大家不要来此摆烂学院，因为一方面本身生科院的本科内容可替代性就特别强，另一方面这种风气肯定会耳濡目染，对于自身品性的培养往往是毁灭性的打击    
  &emsp;&emsp;4. 还有一个优点就是虽然是bio但是在nju内，跑路的话nju内的各个学院认可度高。是一个平均本科教育和二本差不多，但上限可以冲到顶尖生物实验室的折叠学院，逃出生天无论是润还是真的卷出风格卷出水平，都可以极大锻炼学生的自主性，出来过后如果不是极端焦虑就是极端从容    
  
-## Insurance
-
-## Business Administration
-
-## Sociology
-
-## Social Work
-
-## History
-
-## Physics
-
-## Electronics Engineering
-
-## Software Engineering
-
-## Computer Science
 
 ## HERE GOES YOUR CONTENT
 用户贡献评价
 <div id="user-contributions"></div>
-    
-    格式：
-    !contribute
-    ## 更改专业名称
-    *更改任何你喜欢的代号* ：更改评价内容……
-    
 
----
-**贡献于 2025-07-02 08:30**
+``` sql title="格式"  
+复制以下全部内容（一定要有!contribute），修改后发布在底部评论区；等待审核之后就可以显示在页面上啦：
 
- test
+!contribute
+## 更改专业名称，最好写英文
+*更改任何你喜欢的代号，请勿删除星号* ：更改评价内容……
+```
+    

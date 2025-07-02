@@ -33,10 +33,10 @@ jobs:
           DECODED=$(echo "${{ steps.parse.outputs.CONTENT }}" | base64 -d)
           
           # 写入文件（带时间戳和分隔线）
-          TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
+          TIMESTAMP=$(TZ='Asia/Shanghai' date +"%Y-%m-%d %H:%M")
           printf "\n\n---\n**贡献于 ${TIMESTAMP}**\n\n%s" "${DECODED}" \
-            >> docs/college/major.md
-
+          >> docs/college/major.md
+          
       # 步骤3：创建PR（保持不变）
       - name: Create PR
         uses: peter-evans/create-pull-request@v5
