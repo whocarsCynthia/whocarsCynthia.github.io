@@ -55,10 +55,21 @@ comments: False
 
 ## Physics
 
-
-
 ## Electronics Engineering
 
 ## Software Engineering
 
 ## Computer Science
+
+## HERE GOES YOUR CONTENT
+
+<div class="contribution-container">
+  <div class="contribution-header">
+    <h3>用户分享的专业体验</h3>
+    <a href="https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions/new?category=major" 
+       class="contribution-button" target="_blank">
+      分享你的专业体验
+    </a>
+  </div>
+  <div id="discussions-container" class="discussions-grid"></div>
+</div>
