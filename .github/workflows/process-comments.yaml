@@ -1,4 +1,4 @@
-name: Process Academic Reviews
+name: Process Giscus Contributions
 on:
   discussion_comment:
     types: [created]
@@ -9,84 +9,38 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 步骤1：初始化环境
-      - name: Setup Environment
-        id: setup
+      # 步骤1：安全解析Discussion评论
+      - name: Parse Comment
+        id: parse
         env:
           COMMENT_BODY: ${{ toJson(github.event.comment.body) }}
         run: |
-          # 存储原始评论
+          # 写入原始内容到文件
           echo "$COMMENT_BODY" | jq -r . > raw_comment.txt
           
-          # 检测评论类型
-          if grep -q '^!course-review' raw_comment.txt; then
-            echo "TYPE=course" >> $GITHUB_OUTPUT
-            TARGET_FILE="docs/college/course.md"
-          elif grep -q '^!contribute' raw_comment.txt; then
-            echo "TYPE=major" >> $GITHUB_OUTPUT
-            TARGET_FILE="docs/college/major.md"
-          else
-            echo "::error::未识别评论类型，请使用 !course-review 或 !contribute 开头"
-            exit 1
-          fi
-          echo "TARGET_FILE=${TARGET_FILE}" >> $GITHUB_OUTPUT
-
-      # 步骤2：处理课程评价
-      - name: Process Course Review
-        if: steps.setup.outputs.TYPE == 'course'
-        run: |
-          # 提取各字段内容
-          extract_field() {
-            sed -n "/^$1:/s/^$1://p" raw_comment.txt | 
-            sed -e 's/^[ \t]*//' -e 's/[ \t]*$//' |
-            tr -d '\r\n'
-          }
-
-          # 生成标准格式
-          printf "\n- %s %s\n  师资: %s\n  简评：%s\n  人数：%s\n  课堂体验：%s\n  课程难度：%s\n  应用价值：%s\n  考核情况：%s\n  更新时间：%s" \
-            "$(extract_field '课程名称')" \
-            "$(extract_field '评分')" \
-            "$(extract_field '师资')" \
-            "$(extract_field '简评')" \
-            "$(extract_field '人数')" \
-            "$(extract_field '课堂体验')" \
-            "$(extract_field '课程难度')" \
-            "$(extract_field '应用价值')" \
-            "$(extract_field '考核情况')" \
-            "$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')" \
-            >> ${{ steps.setup.outputs.TARGET_FILE }}
-
-      # 步骤3：处理专业评价
-      - name: Process Major Review
-        if: steps.setup.outputs.TYPE == 'major'
-        run: |
-          # 清理原始内容
-          PROCESSED=$(
-            sed -E '
-              s/!contribute//g;
-              /^[[:space:]]*$/d;
-              s/^[[:space:]]+//;
-              s/[[:space:]]+$//
-            ' raw_comment.txt | 
-            base64 -w0
-          )
+          # 处理内容并Base64编码
+          PROCESSED=$(sed -e 's/!contribute//g' -e '/^$/d' raw_comment.txt | base64 -w0)
           
-          # 写入目标文件
-          DECODED=$(echo "$PROCESSED" | base64 -d)
-          printf "\n\n---\n**贡献于 $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')**\n\n%s" \
-            "${DECODED}" \
-            >> ${{ steps.setup.outputs.TARGET_FILE }}
+          # 安全设置输出
+          echo "CONTENT=${PROCESSED}" >> $GITHUB_OUTPUT
+          echo "HAS_CONTRIBUTION=true" >> $GITHUB_OUTPUT
 
-      # 步骤4：创建PR
-      - name: Create Pull Request
+      # 步骤2：更新Markdown文件
+      - name: Update Markdown
+        if: steps.parse.outputs.HAS_CONTRIBUTION == 'true'
+        run: |
+          # Base64解码内容
+          DECODED=$(echo "${{ steps.parse.outputs.CONTENT }}" | base64 -d)
+          
+          # 写入文件（带时间戳和分隔线）
+          TIMESTAMP=$(TZ='Asia/Shanghai' date +"%Y-%m-%d %H:%M")
+          printf "\n\n---\n**贡献于 ${TIMESTAMP}**\n\n%s" "${DECODED}" \
+          >> docs/college/major.md
+          
+      # 步骤3：创建PR（保持不变）
+      - name: Create PR
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Update ${{ steps.setup.outputs.TYPE }} review"
-          title: "📝 Update ${{ steps.setup.outputs.TYPE }} reviews"
-          body: |
-            自动化更新来自讨论区的评价：
-            - 类型：${{ steps.setup.outputs.TYPE }}
-            - 触发评论：#${{ github.event.comment.id }}
-            - 更新文件：${{ steps.setup.outputs.TARGET_FILE }}
-          branch: "review-update-${{ github.run_id }}"
+          commit-message: "Update from discussion comment"
+          branch: "discussion-update-${{ github.run_id }}"

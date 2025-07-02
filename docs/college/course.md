@@ -2,7 +2,7 @@
 title: 人类生存指南
 comments: True
 ---
-欢迎在评论区补充！
+欢迎在底部评论区补充！
 
 ## Courses
 ### Bussiness
@@ -244,27 +244,3 @@ comments: True
 
 ### Others
 
-
-## Your CONTENT
-用户贡献评价
-<div id="user-contributions"></div>
-
-``` sql title="格式"  
-复制以下全部内容（一定要有"!course-review"），修改后发布在评论区；  
-评论支持markdown语法；  
-"九个字段名称不可更改！！且必须要有内容！！"
-等待我手动审核之后就可以显示在页面上啦：  
-
-!course-review
-课程名称: 课程全名  
-评分: ★★☆☆☆ 或 5分制；   
-师资: 教师姓名缩写  
-简评：一句话总结  
-人数：约XX人  
-课堂体验：详细描述  
-课程难度：低/中/高，事多事少，考察出勤情况  
-应用价值：描述  
-考核情况：考试/论文/作业等  
-```
-💡 [Markdown语法学习](https://markdown.com.cn/basic-syntax/line-breaks.html)  
-👉 [评论区指路，请发布在这里](https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions)
