@@ -15,39 +15,32 @@ jobs:
         env:
           COMMENT_BODY: ${{ toJson(github.event.comment.body) }}
         run: |
-          # 安全写入事件数据到临时文件
-          echo "$COMMENT_BODY" > comment_body.json
+          # 写入原始内容到文件
+          echo "$COMMENT_BODY" | jq -r . > raw_comment.txt
           
-          # 使用jq解析JSON内容
-          if grep -q '!contribute' comment_body.json; then
-            CONTENT=$(jq -r 'gsub("!contribute"; "")' comment_body.json | \
-                     sed -e 's/"/\\"/g' -e 's/`/\\`/g')
-            echo "CONTENT=${CONTENT}" >> $GITHUB_OUTPUT
-            echo "HAS_CONTRIBUTION=true" >> $GITHUB_OUTPUT
-          fi
+          # 处理内容并Base64编码
+          PROCESSED=$(sed '/^!contribute$/d' raw_comment.txt | base64 -w0)
+          
+          # 安全设置输出
+          echo "CONTENT=${PROCESSED}" >> $GITHUB_OUTPUT
+          echo "HAS_CONTRIBUTION=true" >> $GITHUB_OUTPUT
 
       # 步骤2：更新Markdown文件
       - name: Update Markdown
         if: steps.parse.outputs.HAS_CONTRIBUTION == 'true'
         run: |
+          # Base64解码内容
+          DECODED=$(echo "${{ steps.parse.outputs.CONTENT }}" | base64 -d)
+          
+          # 写入文件（带时间戳和分隔线）
           TIMESTAMP=$(date +"%Y-%m-%d %H:%M")
-          echo -e "\n\n---\n**贡献于 ${TIMESTAMP}**\n\n${{ steps.parse.outputs.CONTENT }}" \
+          printf "\n\n---\n**贡献于 ${TIMESTAMP}**\n\n%s" "${DECODED}" \
             >> docs/college/major.md
 
-      # 步骤3：自动创建PR
+      # 步骤3：创建PR（保持不变）
       - name: Create PR
-        if: steps.parse.outputs.HAS_CONTRIBUTION == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Add user contribution from Discussion #${{ github.event.discussion.number }}"
-          title: "📝 Update from Discussion #${{ github.event.discussion.number }}"
-          body: |
-            Automated update triggered by:
-            - Discussion: #${{ github.event.discussion.number }}
-            - Comment ID: ${{ github.event.comment.id }}
-            Original content:
-            ```markdown
-            ${{ steps.parse.outputs.CONTENT }}
-            ```
-          branch: "discussion-contrib-${{ github.event.comment.id }}"
+          commit-message: "Update from discussion comment"
+          branch: "discussion-update-${{ github.run_id }}"
