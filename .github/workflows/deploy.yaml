@@ -25,6 +25,7 @@ jobs:
           pip install mdx_truly_sane_lists
           pip install mkdocs-git-revision-date-localized-plugin
           pip install mkdocs-document-dates
+          pip inatall mkdocs-mermaid2-plugin
 
       - name: Build site
         run: mkdocs build

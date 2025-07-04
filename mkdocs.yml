@@ -77,6 +77,7 @@ theme:
 
 
 markdown_extensions:
+  - md_in_html
   - pymdownx.arithmatex:
       generic: true
   - abbr  # 支持缩写
@@ -114,6 +115,12 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format  # Mermaid图表
+        - name: card-grid
+          class: card-grid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: card-carousel
+          class: card-carousel
+          format: !!python/name:pymdownx.superfences.fence_code_format
         #- name: math
         #  class: arithmatex
          # format: !!python/object/apply:pymdownx.arithmatex.arithmatex_fenced_format  # 数学公式
@@ -162,6 +169,8 @@ extra_css:
   - css/toc.css
   - css/flink.css
   - css/extra.css
+  - css/process_tracker.css
+  - css/entertain.css
   - https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap
   - https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap
   
@@ -173,13 +182,15 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
   - javascripts/extra.js
   - javascripts/image-path.js
+  - javascripts/tracker.js
+  - javascripts/entertain.js
   # - https://polyfill.alicdn.com/polyfill.min.js?features=es6
 
 nav:
   - Home: index.md
   - 生活访问: 
-      - Tracking: life/track.md
       - Guide: life/guide.md
+      - Tracking: life/track.md  
       - Entertainment: life/entertain.md
       
 

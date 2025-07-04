@@ -6,13 +6,38 @@ comments: False
 一些聊天记录
 
 ## 抽象病房
-!!! question ""   
-    ![](../pic/c1.png)
----
-!!! question ""
-    ![](../pic/c2.png)
+   
+![](../pic/c1.png)
+
+![](../pic/c2.png)
 
 ## 深夜播客
+??? note "关于宿舍楼怪谈"
+    
+    *2:54*  
+    俺 &emsp;<span class="dialogue-bubble mine">你真的出去觅食了啊</span><br>
+    友 &emsp;<span class="dialogue-bubble">对</span><br>
+    友 &emsp;<span class="dialogue-bubble">三楼人都神经病 这会自习室还有俩人 还有一个在开水房打电话</span><br>
+    俺 &emsp;<span class="dialogue-bubble mine">这层商院的人多 很正常</span><br>  
+    友 &emsp;<span class="dialogue-bubble">你们班倒一在口口班能排个第四第五的</span>  *注：口口为打码*  <br>
+    俺 &emsp;<span class="dialogue-bubble mine">不要再暴击了</span><br>
+    俺 &emsp;<span class="dialogue-bubble mine">人生就是选择</span><br>
+
+---
+??? note "关于失眠"
+
+    A &emsp;<span class="dialogue-bubble spec">你要学会</span>  
+    A &emsp;<span class="dialogue-bubble spec">吗的那个话怎么讲 </span>  
+    A &emsp;<span class="dialogue-bubble spec">我也不知道我在说什么了</span>  
+    A &emsp;<span class="dialogue-bubble spec">我操这么快两点了</span>  
+    A &emsp;<span class="dialogue-bubble spec">10点多的时候超级困</span>  
+    俺 &emsp;<span class="dialogue-bubble mine">我每天都这样</span>  
+    俺 &emsp;<span class="dialogue-bubble mine">然后都是三点睡的</span>  
+    A &emsp;<span class="dialogue-bubble spec">现在反而不困了</span>  
+    A &emsp;<span class="dialogue-bubble spec">。 我昨天是 早上八点睡 </span>  
+    俺 &emsp;<span class="dialogue-bubble mine">脑子真的停不下来</span>  
+    俺 &emsp;<span class="dialogue-bubble mine">有点崩溃了</span>  
+    俺 &emsp;<span class="dialogue-bubble mine">卧槽我真迟早有一天被我自己脑回路整死</span>  
 
 ---   
 

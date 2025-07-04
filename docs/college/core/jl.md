@@ -2,8 +2,9 @@
 title: 人类生存指南
 comments: False
 ---
+[重要工具：连享会](https://www.lianxh.cn/blogs/18.html)
 
-## 大数据经济学 
+## DID
 
 ### 素材
 

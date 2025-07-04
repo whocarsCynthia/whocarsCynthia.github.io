@@ -174,7 +174,7 @@ comments: False
 </details>
 
 {==难点与易错点==}
-???+ question
+??? question
     1. **left join, right join, inner join, full join**  
         注意两个表的字段都会保留，当t1和t2中有同名字段，比如 id，结果中会显示两列id 
         左连接，为左表的所有行匹配右表行，没有匹配的行为NULL；右连接反之；  

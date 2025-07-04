@@ -1,0 +1,126 @@
+/* 时间追踪器样式 */
+.time-tracker {
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  background-color: var(--md-code-bg-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tracker-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.hours {
+  font-weight: bold;
+  color: var(--md-accent-fg-color);
+}
+
+/* 按钮基础样式 */
+.add-hour,
+.undo-hour,
+.reset-all {
+  background-color: var(--md-primary-fg-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-hour:hover,
+.undo-hour:hover,
+.reset-all:hover {
+  background-color: var(--md-accent-bg-color);
+  transform: translateY(-2px);
+}
+
+/* 特定按钮颜色（可选）*/
+.add-hour {
+  color: var(--md-accent-fg-color);
+}
+
+.undo-hour,
+.reset-all {
+  color: var(--md-accent-fg-color);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+  gap: 4px;
+}
+
+.grid-cell {
+  width: 20px;
+  height: 20px;
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--light);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.grid-cell.filled {
+  background-color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+}
+
+.tracker-footer {
+  margin-top: 1rem;
+  text-align: right;
+  color: var(--md-default-fg-color--light);
+}
+
+/* 控制按钮组样式 */
+.tracker-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* 撤销按钮样式 */
+.undo-hour {}
+
+/* 重置按钮样式 */
+.reset-all {}
+
+/* 按钮禁用状态 */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 操作确认弹窗 */
+.confirm-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--md-default-bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  border: 1px solid var(--md-primary-fg-color);
+}
+
+.confirm-dialog p {
+  margin: 0 0 1rem;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}

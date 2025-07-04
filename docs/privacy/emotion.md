@@ -6,7 +6,7 @@ comments: False
     “每个人细究起来都蛮有意思，只是很少有被人仔细看见的机会，以至于被仔细看见这件事，有点近似于爱。”
 
 ## Coming of Age
-### Romance
+### Romantic
 <div class="encrypted-section" data-password="0610">
   <div class="prompt">
     <p>🔒 A simple bouquet of white tulips </p>
@@ -29,7 +29,7 @@ comments: False
     <p>我害怕之下的狂热，是没有办法在那时刻察觉的。</p>
     <p>哎呀，果然直球克一切。</p>
     <p>写下这些难道是为了挽留什么吗？</p>
-    <p>不要再犯错了。</p>
+    <p>大概是一种告解。</p>
 
   </div>
 </div>
@@ -58,7 +58,7 @@ document.querySelectorAll('.encrypt-btn').forEach(btn => {
 });
 </script>
 
-### Gloom
+### Gloomy
 
 
 ## Recording  
