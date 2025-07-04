@@ -556,7 +556,7 @@ pre code {
         background-color: #2d333b;
         box-shadow: 0 1px 3px rgba(0,0,0,0.3);
         color: #e6e6e6;
-        border-right: 3px solid #66788f;
+        border-right: 3px solid #899bb3;
     }
 }
 
@@ -585,14 +585,14 @@ pre code {
     }
     
     [data-md-color-scheme="slate"] & {
-        background-color: #7d243d;
-        border-right: 3px solid #f66484;
+        background-color: #8d3c49;
+        border-right: 3px solid #f77591;
     }
 }
 
 /* 响应式调整 */
 @media (max-width: 768px) {
-    .dialogue-bubble, .dialogue-bubble.mine {
+    .dialogue-bubble, .dialogue-bubble.mine,.dialogue-bubble.spec {
         max-width: 90%;
         margin-left: 5%;
     }

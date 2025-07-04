@@ -1,0 +1,127 @@
+/* --- 公共 --- */
+body {
+  font-family: "Josefin Sans", Roboto, "Noto serif SC";
+}
+
+.ljs-section {
+  margin: 2rem 0;
+  padding: 1rem;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ljs-card {
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin: 1.2rem 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  [data-md-color-scheme="default"] & {
+        background: #fffdfd;
+        box-shadow: 0 4px 4px #9c9c9c;
+      }
+    
+    [data-md-color-scheme="slate"] & {
+        background: #1e1e1e;
+        box-shadow: 0 4px 4px var(--md-accent-fg-color);
+    }  
+}
+
+
+.ljs-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* --- 板块标题样式区分 --- */
+.music h2 {
+  color: #ff4d6d;
+  border-left: 5px solid #ffb3c1;
+  padding-left: 0.5rem;
+}
+.film h2 {
+  color: #00916e;
+  border-left: 5px solid  #b5ead7;
+  padding-left: 0.5rem;
+}
+.books h2 {
+  color: #6a4c93;
+  border-left: 5px solid #cdb4db;
+  padding-left: 0.5rem;
+}
+.sports h2 {
+  color: #0077b6;
+  border-left: 5px solid #90e0ef;
+  padding-left: 0.5rem ;
+}
+.games h2 {
+  color: #f8961e;
+  border-left: 5px solid #fcd5ce;
+  padding-left: 0.5rem;
+}
+
+/* --- 音乐卡片 --- */
+.ljs-song-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+.music .ljs-card blockquote {
+  border-left: 3px solid #ffe3e3;
+  padding-left: 1rem;
+}
+
+/* --- 影视卡片 --- */
+
+.film .ljs-movie-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.film .ljs-movie-thumbs {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.film .ljs-movie-thumbs img {
+  width: 48%;
+  cursor: zoom-in;
+  border-radius: 6px;
+}
+
+/* --- 游泳板块图片排列 --- */
+.sports .ljs-swim-images {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  width: 48%;
+  cursor: zoom-in;
+  border-radius: 6px;
+
+}
+
+/* --- Overlay 弹窗 --- */
+.ljs-overlay {
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.ljs-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #000;
+  animation: zoomIn 0.3s ease-in;
+}
+@keyframes zoomIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
