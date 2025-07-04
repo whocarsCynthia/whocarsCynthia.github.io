@@ -1,6 +1,6 @@
 /* --- 公共 --- */
 body {
-  font-family: "Josefin Sans", Roboto, "Noto serif SC";
+  font-family: var(--md-text-font);
 }
 
 .ljs-section {
