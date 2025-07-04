@@ -8,7 +8,7 @@ comments: False
 
 <section class="ljs-section music">
   <h2>🎵 Music</h2>
-  <p>点击专辑封面图跳转播放</p>
+  <p>专辑封面图加载中，点击跳转播放</p>
 
   <div class="ljs-card">
     <h3>最近在听</h3>
@@ -82,8 +82,10 @@ comments: False
   <h2>🎮 Games</h2>
   <div class="ljs-card interactive-card" id="goCard">
     <h3>围棋</h3>
-    <p >入门中，9路吃5子水平。</p>
+    <p >入门中，9路吃5子水平。刚打到13路吃5子。目前胜率是72%</p>
     <blockquote>路遇臭屁网感中二男，被打败了……可恶！</blockquote>
-    <img src="/pic/game1.jpg" alt="围棋">
+    <img src="/pic/game1.jpg" alt="围棋1">
+    <blockquote>玩儿贪吃蛇来了</blockquote>
+    <img src="/pic/game2.jpg" alt="围棋2">
   </div>
 </section>
