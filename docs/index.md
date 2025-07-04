@@ -50,6 +50,8 @@ comments: true
     - [x] 页面更新datetime的显示似乎有误
     - [ ] extra_css有标识符错误
     - [ ] gantt 图无法显示完全
+    - [ ] 访客贡献页面的评论区不指定
+    - [ ] 贡献者会收到新评论邮件
 
 === "Enhancements"
     - [x] 封面自定义
