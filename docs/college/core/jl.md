@@ -1,5 +1,5 @@
 ---
-title: 人类生存指南
+title: 计量经济学
 comments: False
 ---
 [重要工具：连享会](https://www.lianxh.cn/blogs/18.html)

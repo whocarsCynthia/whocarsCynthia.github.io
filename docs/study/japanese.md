@@ -7,7 +7,7 @@ comments: False
 
 据说600个小时就能学到N2，∑(〟OОO)真…真的吗!?  
 ## 学习进度追踪
-
+貌似需要刷新才能看全↓  
 <div class="time-tracker" data-total="600" data-completed="0">
   <div class="tracker-header">
     <h3>日语学习进度 <span class="hours">0/600</span> 小时</h3>
