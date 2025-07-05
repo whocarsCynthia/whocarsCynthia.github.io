@@ -10,7 +10,7 @@ comments: False
 <div class="encrypted-section" data-password="0610">
   <div class="prompt">
     <p>🔒 A simple bouquet of white tulips </p>
-    <input type="password" class="pw-input" placeholder="输入访问密码(4位数字)">
+    <input type="password" class="pw-input" placeholder="输入访问密码">
     <button class="encrypt-btn md-button">解锁内容</button>
     <p class="error-msg" style="color:red;display:none;margin-top:0.5rem">密码错误！</p>
   </div>

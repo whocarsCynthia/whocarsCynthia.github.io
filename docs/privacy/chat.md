@@ -6,8 +6,6 @@ comments: False
 一些聊天记录
 
 ## 抽象病房
-   
-![](../pic/c1.png)
 
 ![](../pic/c2.png)
 
