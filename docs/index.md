@@ -72,6 +72,9 @@ comments: true
 
 
 === "DeveloperLog"  
+    - 20250705  腱鞘炎中
+      增加了提示；  
+      修复贡献机制；  
 
     - 20250704  腱鞘炎中  
       更新了子页面的内容；  
@@ -117,8 +120,7 @@ comments: true
       更新了网站icon，一本书上的一只猪；
 
 
-
-       
+      
  
 
 ## Expecting Content
@@ -126,3 +128,11 @@ comments: true
 - [ ] github.io website
 - [ ] 高中语文
 
+
+## 重要提示
+在本站任意页面评论区发表留言之后，GitHub会默认您订阅了该评论区。若有其他人在此评论区发表留言，您将收到邮件通知。取消订阅的方法（任选一种）：
+  1. 邮件页面选择退订。
+  2. 点此进入[评论区页面](https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions)，找到您发表留言的那一个特定评论区，找到如图按钮选择【Unsubscribe】：
+      ![](pic/unsubscribe.png)
+  3. 点此进入[仓库页面](https://github.com/whocarsCynthia/whocarsCynthia.github.io)，找到【watch】按钮，改为【ignore】：
+      ![](pic/ignore.png) 
