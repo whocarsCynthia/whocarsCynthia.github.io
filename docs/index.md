@@ -134,5 +134,5 @@ comments: true
   1. 邮件页面选择退订。
   2. 点此进入[评论区页面](https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions)，找到您发表留言的那一个特定评论区，找到如图按钮选择【Unsubscribe】：
       ![](pic/unsubscribe.png)
-  3. 点此进入[仓库页面](https://github.com/whocarsCynthia/whocarsCynthia.github.io)，找到【watch】按钮，改为【ignore】：
+  3. 点此进入[仓库页面](https://github.com/whocarsCynthia/whocarsCynthia.github.io)，找到【Watch】按钮，改为【Ignore】：
       ![](pic/ignore.png) 
