@@ -17,8 +17,7 @@ comments: true
     - sql
     - 日本語
 
-???+ tip "七日待办" 
-    - [ ] 购买短期人身险 
+???+ tip "七日待办"  
     - [x] 确定时间表
     - [ ] 网站：课程笔记版块
     - [x] 网站：生活访问版块
@@ -50,8 +49,8 @@ comments: true
     - [x] 页面更新datetime的显示似乎有误
     - [ ] extra_css有标识符错误
     - [ ] gantt 图无法显示完全
-    - [ ] 访客贡献页面的评论区不指定
-    - [ ] 贡献者会收到新评论邮件
+    - [ ] 访客贡献机制出错
+    - [x] 评论者会收到新评论邮件
 
 === "Enhancements"
     - [x] 封面自定义
@@ -73,8 +72,7 @@ comments: true
 
 === "DeveloperLog"  
     - 20250705  腱鞘炎中
-      增加了提示；  
-      修复贡献机制；  
+      增加了提示与致谢；    
 
     - 20250704  腱鞘炎中  
       更新了子页面的内容；  
@@ -129,10 +127,17 @@ comments: true
 - [ ] 高中语文
 
 
-## 重要提示
-在本站任意页面评论区发表留言之后，GitHub会默认您订阅了该评论区。若有其他人在此评论区发表留言，您将收到邮件通知。取消订阅的方法（任选一种）：
-  1. 邮件页面选择退订。<br>
+## {==重要提示==}
+在本站任意页面评论区发表留言之后，GitHub会默认您订阅了该评论区。若有其他人在此评论区发表留言，您将收到邮件通知。取消订阅的方法（任选一种）：<br>
+  1. 邮件页面选择退订。<br><br>
   2. 点此进入[评论区页面](https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions)，找到您发表留言的那一个特定评论区，找到如图按钮选择【Unsubscribe】：<br>
-      ![](pic/unsubscribe.png)<br>
+      ![](pic/unsubscribe.png)<br><br>
   3. 点此进入[仓库页面](https://github.com/whocarsCynthia/whocarsCynthia.github.io)，找到【Watch】按钮，改为【Ignore】：<br>
       ![](pic/ignore.png) 
+
+## 致谢
+1. 【起源】刷到了一位来自ZJU的同学的主页，模仿之：https://www.philfan.cn/；<br>
+2. 【框架】Material for Mkdocs：https://squidfunk.github.io/mkdocs-material/；<br>
+3. 【助手】Deepseek老师、Gpt老师、Gemini老师；<br>
+4. 【发布测试】eunseoksama；<br>
+5. 【精神支持】eunseoksama、Ryann、陆家嘴拼好饭人才、Alfred；<br>
