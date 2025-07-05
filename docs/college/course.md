@@ -1,8 +1,8 @@
 ---
 title: 人类生存指南
-comments: True
+comments: False
 ---
-欢迎在底部评论区补充！
+欢迎在底部评论区补充！（暂未开放）
 
 ## Courses
 ### Bussiness

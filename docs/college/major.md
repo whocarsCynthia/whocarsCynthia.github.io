@@ -59,7 +59,7 @@ comments: False
 - *更改任何你喜欢的代号，请勿删除星号* ：更改评价内容……  
 ```
 💡 [Markdown语法学习](https://markdown.com.cn/basic-syntax/line-breaks.html)  
-👉 [评论区指路，请发布在这里](https://github.com/whocarsCynthia/whocarsCynthia.github.io/discussions/12)
+👉 评论区指路，请发布在这里 (暂未开放)
 
  
 

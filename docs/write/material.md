@@ -1,6 +1,6 @@
 ---
 title: 写下的一切
-comments: True
+comments: False
 ---
 
 ## 技巧
