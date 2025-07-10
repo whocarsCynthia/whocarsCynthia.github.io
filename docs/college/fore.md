@@ -8,10 +8,9 @@ comments: False
 !!! abstract
     1. [ ] [课程评价](course.md)
     2. [ ] [专业测评](major.md)
-    3. [ ] [专业课笔记](core/jl.md)
-    4. [ ] [选修课笔记](elective.md)
-    5. [ ] [相关赛事](competition.md)
-    6. [ ] [留学信息](abroad.md)
+    3. [ ] [课程笔记](core/jl.md)
+    4. [ ] [相关赛事](competition.md)
+    5. [ ] [留学信息](abroad.md)
 
 
 {==Unsolicited Advice==}  

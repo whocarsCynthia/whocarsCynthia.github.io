@@ -204,11 +204,9 @@ nav:
       - Abstract: college/fore.md
       - Course Evaluation: college/course.md
       - Major Overview: college/major.md
-      - Note Core Courses: 
+      - Courses Note: 
           - 计量经济学: college/core/jl.md
           - 大数据经济学: college/core/dsj.md
-        
-      - Note Elective Courses: college/elective.md  
       - Related Competiton: college/competition.md
       - Study Abroad: college/abroad.md
 
