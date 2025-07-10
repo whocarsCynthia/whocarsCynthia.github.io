@@ -16,4 +16,4 @@ comments: False
 ## General Electives
 
 #### 公文写作
-待上传
+🖆[下载pdf附件](/公文写作.pdf)
