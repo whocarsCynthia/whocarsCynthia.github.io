@@ -191,8 +191,7 @@ nav:
   - 生活访问: 
       - Guide: life/guide.md
       - Tracking: life/track.md  
-      - Entertainment: life/entertain.md
-      
+      - Entertainment: life/entertain.md     
 
   - 牛马手记: 
       - Abstract: work/fore.md
@@ -218,9 +217,6 @@ nav:
 
   - 人格探索: 
       - Tests: privacy/test.md
-      - Chats: privacy/chat.md
-      - Emotions: privacy/emotion.md
-      - Puzzle: privacy/puzzle.md
 
   - 脑洞发散: 
       - 素材: write/material.md

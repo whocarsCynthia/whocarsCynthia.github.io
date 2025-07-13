@@ -37,17 +37,17 @@ comments: False
   <div class="ljs-card interactive-card">
     <h3>最近在看</h3>
     <div class="ljs-movie-content">
-      <img src="/pic/tv1.png" alt="Inside No.9 封面">
+      <img src="/pic/tv2.png" alt="Love, Death & Robots 封面">
       <div>
-        <p class="ljs-song-title">Inside No.9 – Steve Pemberton, Reece Shearsmith</p>
+        <p class="ljs-song-title">Love, Death & Robots</p>
         <blockquote>
-          一共9季55集。看完4季了。两位自编自导自演实在是太厉害。纯正大英幽默，讽刺、解构、平静发疯。各种敏感话题都无所畏惧。<br>下三路内容含量超标，别吃饭看...
+          久仰大名爱死机。目前看完了s1 4 5。画面这块真是顶级，叹为观止。<br> 剧情嘛，改编居多，局限也挺多的，但确实有些不错的思考。最喜欢S1 Zima-Blue这集，有复得返自然的哲思。  
         </blockquote>
       </div>
     </div>
     <div class="ljs-movie-thumbs">
-      <img src="/pic/no91.png" alt="剧照1">
-      <img src="/pic/no92.png" alt="剧照2">
+      <img src="/pic/剧照1.jpg" alt="剧照1">
+      <img src="/pic/剧照2.jpg" alt="剧照2">
     </div>
   </div>
 
