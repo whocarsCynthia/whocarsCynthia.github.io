@@ -5,6 +5,16 @@ comments: False
 
 
 ## For My Eyes Only
+
+    20250714  
+    枷锁。  
+    生活也许就是不断地套上枷锁，脱掉枷锁，在此间往复。  
+
+    It is shouting loudly:    
+    Somebody helps me!  
+    
+    Sorry for being lazy.  
+---
     20250712
     黎明之于一天，如春天之于一年，如婴儿之于死亡。  
     循环之始，也是终点。  
